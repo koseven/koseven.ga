@@ -46,8 +46,8 @@ New features can be added using modules.
 ## Are modules of the original Kohana compatible?
 
 Yes they are, just be sure that they are compatible with KO 3.3.X.
-An overview of Koseven's team own modules can be found on [this](https://koseven.ga/modules.html) page.
-There's also a list online with a nice overview of existing modules maintained (or abandoned) by others. You can consult this list at [kohana-modules.com](https://koseven.ga/modules.html)
+An overview of Koseven's team own modules can be found on [koseven.ga/modules.html](https://koseven.ga/modules.html) page.
+There's also a list online with a nice overview of existing kohana modules maintained (or abandoned) by others. You can consult this list at [kohana-modules.com](https://kohana-modules.com)
 
 ## Why all modules in 1 repo?
 
