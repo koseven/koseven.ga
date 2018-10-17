@@ -20,3 +20,4 @@ An awesome list of compatible modules ready for your next Koseven Project.
 - [Imagefly](https://github.com/Bodom78/kohana-imagefly) - A Kohana module to quickly create resized / cropped images directly through url parameters.
 - [Memcached](https://github.com/gimpe/kohana-memcached) - Memcached cache integration
 - [Twig](https://github.com/errotan/koseven-twig) - Allows using twig templates for views
+- [Controller-Namespace](https://github.com/errotan/koseven-controller-namespace) - Changes behaviour of koseven to support namespaces in controller class finding and loading 
