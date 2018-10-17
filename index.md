@@ -76,4 +76,4 @@ This will help us to fix the bug as quickly as possible, and if you'd like to fi
 
 ## Contributing
 
-Any help is more than welcome! Please see [Contributing](https://github.com/koseven/koseven/blob/gh-pages/CONTRIBUTING.md)
+Any help is more than welcome! Please see [Contributing](https://github.com/koseven/koseven/blob/master/CONTRIBUTING.md)
