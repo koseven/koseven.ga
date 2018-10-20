@@ -2,7 +2,7 @@
 layout: default
 title: Koseven a Kohana Framework fork compatible with PHP7
 ---
-## [Download 3.3.7](https://github.com/koseven/koseven/releases/tag/3.3.7)
+## [Download 3.3.8](https://github.com/koseven/koseven/releases/tag/3.3.8)
 
 ### [Join the Telegram group](https://telegram.me/koseven)
 
@@ -29,7 +29,7 @@ If you were using 3.3.x version normally yes. Normally? There are 4 breaking cha
 
 We have also added the pagination module.
 
-## Migrate Kohana 3.3.x to Koseven 3.3.7
+## Migrate Kohana 3.3.x to Koseven 3.3.x
 
 - **Kohana_Kohana_Exception**, all functions that received parameter Exception $e have been replaced to just $e. If you are extending the class verify you have the same.
 - **Kohana_URL**, now function site has a new parameter `$subdomain = NULL`, if you are extending the class and this function add it.
