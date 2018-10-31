@@ -2,7 +2,7 @@
 layout: default
 title: Koseven a Kohana Framework fork compatible with PHP7
 ---
-## [Download 3.3.8](https://github.com/koseven/koseven/releases/tag/3.3.8)
+## [Download 3.3.8](https://github.com/koseven/koseven/archive/3.3.8.zip)
 
 ### [Join the Telegram group](https://telegram.me/koseven)
 
