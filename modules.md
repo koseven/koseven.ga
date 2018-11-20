@@ -21,3 +21,4 @@ An awesome list of compatible modules ready for your next Koseven Project.
 - [Memcached](https://github.com/gimpe/kohana-memcached) - Memcached cache integration
 - [Twig](https://github.com/errotan/koseven-twig) - Allows using twig templates for views
 - [Controller-Namespace](https://github.com/errotan/koseven-controller-namespace) - Changes behaviour of koseven to support namespaces in controller class finding and loading 
+- [REST](https://github.com/toitzi/koseven-rest) - A feature-packed Koseven module that adds REST-API support to your Koseven applications.
