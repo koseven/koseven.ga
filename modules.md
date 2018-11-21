@@ -22,3 +22,4 @@ An awesome list of compatible modules ready for your next Koseven Project.
 - [Twig](https://github.com/errotan/koseven-twig) - Allows using twig templates for views
 - [Controller-Namespace](https://github.com/errotan/koseven-controller-namespace) - Changes behaviour of koseven to support namespaces in controller class finding and loading 
 - [REST](https://github.com/toitzi/koseven-rest) - A feature-packed Koseven module that adds REST-API support to your Koseven applications.
+- [Subdomain](https://github.com/toitzi/koseven-subdomain) - Koseven module to define diffrent routes by your custom subdomains.
