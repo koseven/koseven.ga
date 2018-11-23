@@ -39,15 +39,15 @@ We have also added the pagination module.
 
 ## What changes have you made?
 
-So far is exactly as last stable version of KO 3.3.6 released on Jul 25, 2016. But compatible with PHP 7 / PHP 7.1.
+So far is exactly as last stable version of KO 3.3.6 released on Jul 25, 2016. But compatible with PHP 7.x.
 Our focus is to keep the framework compatible with new releases of PHP, fix bugs and try to improve the speed.
 New features can be added using modules.
 
 ## Are modules of the original Kohana compatible?
 
-Yes they are, just be sure that they are compatible with KO 3.3.X.
-An overview of Koseven's team own modules can be found on [this](https://koseven.ga/modules.html) page.
-There's also a list online with a nice overview of existing modules maintained (or abandoned) by others. You can consult this list at [kohana-modules.com](https://koseven.ga/modules.html)
+Yes they are, just be sure that they are compatible with KO 3.3.x.
+An overview of Koseven's team own modules can be found on [this page](https://koseven.ga/modules.html).
+There's also a list online with a nice overview of existing modules maintained (or abandoned) by others. You can consult this list at [kohana-modules.com](https://kohana-modules.com), [packagist.org](https://packagist.org/?query=koseven).
 
 ## Why all modules in 1 repo?
 
