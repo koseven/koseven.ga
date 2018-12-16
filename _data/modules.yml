@@ -1,0 +1,56 @@
+# Categories: database, frontend, misc
+
+- name: Blacksmith
+  url: https://github.com/themusicman/Blacksmith
+  description: A MySQL database manipulation module for Kohana 3
+  category: database
+
+- name: Breadcrumbs
+  url: https://github.com/kierangraham/breadcrumbs
+  description: Simple Breadcrumb navigation module
+  category: frontend
+
+- name: Cron
+  url: https://github.com/neo22s/kohana-cron
+  description: A Kohana module for scheduling tasks in DB
+  category: misc
+
+- name: Email
+  url: https://github.com/svenbw/kohana-email
+  description: Sending emails trough PHPMailer or SwiftMailer
+  category: misc
+
+- name: FormManager
+  url: https://github.com/colinbm/kohana-formmanager
+  description: Create reusable forms that are self contained. You can tie it to a ORM model, or roll your own.
+  category: frontend
+
+- name: Imagefly
+  url: https://github.com/Bodom78/kohana-imagefly
+  description: A Kohana module to quickly create resized / cropped images directly through url parameters.
+  category: frontend
+
+- name: Memcached
+  url: https://github.com/gimpe/kohana-memcached
+  description: Memcached cache integration
+  category: misc
+
+- name: Twig
+  url: https://github.com/errotan/koseven-twig
+  description: Allows using twig templates for views
+  category: frontend
+
+- name: Controller-Namespace
+  url: https://github.com/errotan/koseven-controller-namespace
+  description: Changes behaviour of koseven to support namespaces in controller class finding and loading
+  category: misc
+
+- name: REST
+  url: https://github.com/toitzi/koseven-rest
+  description: A feature-packed Koseven module that adds REST-API support to your Koseven applications.
+  category: misc
+
+- name: Subdomain
+  url: https://github.com/toitzi/koseven-subdomain
+  description: Koseven module to define different routes by your custom subdomains.
+  category: misc
