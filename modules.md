@@ -23,3 +23,4 @@ An awesome list of compatible modules ready for your next Koseven Project.
 - [Controller-Namespace](https://github.com/errotan/koseven-controller-namespace) - Changes behaviour of koseven to support namespaces in controller class finding and loading 
 - [REST](https://github.com/toitzi/koseven-rest) - A feature-packed Koseven module that adds REST-API support to your Koseven applications.
 - [Subdomain](https://github.com/toitzi/koseven-subdomain) - Koseven module to define diffrent routes by your custom subdomains.
+- [Docker](https://github.com/toitzi/koseven-docker) - Docker Image for Koseven. Fastest way to fire up your Koseven installation.
