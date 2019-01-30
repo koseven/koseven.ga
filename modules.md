@@ -24,3 +24,4 @@ An awesome list of compatible modules ready for your next Koseven Project.
 - [REST](https://github.com/toitzi/koseven-rest) - A feature-packed Koseven module that adds REST-API support to your Koseven applications.
 - [Subdomain](https://github.com/toitzi/koseven-subdomain) - Koseven module to define diffrent routes by your custom subdomains.
 - [Docker](https://github.com/toitzi/koseven-docker) - Docker Image for Koseven. Fastest way to fire up your Koseven installation.
+- [Debug Toolbar](https://github.com/toitzi/koseven-debug-toolbar) - Debugging Toolbar for Koseven
