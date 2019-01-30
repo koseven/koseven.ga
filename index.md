@@ -48,7 +48,7 @@ New features can be added using modules.
 
 Yes they are, just be sure that they are compatible with KO 3.3.X.
 An overview of Koseven's team own modules can be found on [this](https://koseven.ga/modules.html) page.
-There's also a list online with a nice overview of existing modules maintained (or abandoned) by others. You can consult this list at [kohana-modules.com](https://koseven.ga/modules.html)
+There's also a list online with a nice overview of existing modules maintained (or abandoned) by others. You can consult this [list](https://koseven.ga/modules.html).
 
 ## Why all modules in 1 repo?
 
