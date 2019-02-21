@@ -18,9 +18,10 @@ function ul_expandable() {
 }
 
 
-$('ul li').click(function (e) {
+$('.doc-nav ul li').click(function (e) {
     e.stopPropagation();
     if ($(this).hasClass('expandable')) {
+        $(this).siblings().find('ul').slideUp();
         $(this).find('> ul').slideToggle();
     }
 });
