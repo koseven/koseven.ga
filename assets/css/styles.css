@@ -1227,9 +1227,54 @@ select {
   display: inline-block;
 }
 
-.cards-section {
-  padding: 60px 0;
+.cards-section,
+section.story {
+  padding: 20px 0;
   background: #f9f9fb;
+}
+
+section.story h3 {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+section.story p {
+  font-size: 1em;
+}
+
+section.story .icon-holder {
+  padding-left: 15px;
+  padding-right: 0;
+}
+
+section.story .icon-holder svg {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 991px) {
+  section.story .icon-holder {
+    padding: 0;
+  }
+
+  section.story .icon-holder svg {
+    max-height: 50px;
+    width: auto;
+    margin-top: 30px;
+  }
+
+  section.story .feature-holder {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  section.story .hide-sm {
+    display: none;
+  }
+}
+
+section.story h2 {
+  margin-bottom: 40px;
 }
 
 .cards-section .title {
@@ -1246,7 +1291,8 @@ select {
   color: #616670;
 }
 
-.cards-section .cards-wrapper {
+.cards-section .cards-wrapper,
+.feature-wrapper {
   max-width: 860px;
   margin-left: auto;
   margin-right: auto;
