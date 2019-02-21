@@ -22,14 +22,6 @@ html, body {
 
 .page-wrapper {
   min-height: 100%;
-  /* equal to footer height */
-  margin-bottom: -50px;
-}
-
-.page-wrapper:after {
-  content: "";
-  display: block;
-  height: 50px;
 }
 
 .footer {

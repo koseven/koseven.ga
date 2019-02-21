@@ -42,7 +42,7 @@ title: 'Start'
                                     <p>Anything can be extended using the unique filesystem design, little or no configuration is necessary, error handling helps locate the source of errors quickly, and debugging and profiling provide insight into the application.
                                     <br/>
                                     To help secure your applications, tools for input validation, signed cookies, form and HTML generators are all included. The database layer provides protection against SQL injection. Of course, all official code is carefully written and reviewed for security.</p>
-                                    
+
                                     <h3 class="block-title">Contribute to the Documentation</h3>
                                     <p>We are working very hard to provide complete documentation. To help improve the guide, please fork the userguide, make your changes, and send a pull request. If you are not familiar with Git, you can also submit a feature request (requires registration).</p>
 
@@ -62,19 +62,19 @@ title: 'Start'
                                 <h2 class="section-title">Installing</h2>
                                 <div id="step1"  class="section-block">
                                     <h3 class="block-title">By Download</h3>
-                                    <p>Once downloaded, you should extract the Kohana application to a directory where the web server can access it. Going forward, we are going to assume you've extracted the application to a kohana directory such that <code>http://localhost/kohana/index.php</code> is pointing to the <code>index.php</code> file in the Kohana release. 
+                                    <p>Once downloaded, you should extract the Koseven application to a directory where the web server can access it. Going forward, we are going to assume you've extracted the application to the root directory of your webserver and configured your document root to be the public folder of Koseven such that <code>http://localhost/index.php</code> is pointing to the <code>index.php</code> file in the Koseven release.
                                     </p><!--//code-block-->
                                 </div><!--//section-block-->
                                 <div id="step2"  class="section-block">
                                     <h3 class="block-title">By Github</h3>
-                                    <p>The source code for Koseven is hosted with GitHub. To install Koseven using the github source code first you need to install git. Visit        http://help.github.com for details on how to install git on your platform.
+                                    <p>The source code for Koseven is hosted with GitHub. To install Koseven using the github source code first you need to install git. Visit http://help.github.com for details on how to install git on your platform.
 
                                         Use the following command to install Koseven from GitHub:
-                                        <code>git clone git@github.com:koseven/koseven.git .</code>
+                                        <code class="language-git">git clone https://github.com/koseven/koseven .</code>
                                     </p>
                                 </div><!--//section-block-->
                             </section><!--//doc-section-->
-                            
+
                             <section id="configure-section" class="doc-section">
                                 <h2 class="section-title">Configure</h2>
                                 <div class="section-block">
@@ -83,15 +83,15 @@ title: 'Start'
     Open <code>application/bootstrap.php</code> and make the following changes:
 </p>
 <p>Set the default timezone for your application.
-<pre><code class="language-markup">// Example of changing timezone to Sao Paulo, Brazil
+<pre><code class="language-php">// Example of changing timezone to Sao Paulo, Brazil
 date_default_timezone_set('America/Sao_Paulo');
 </code></pre>
 </p>
 
-<p>Set the base_url in the Kohana::init call to reflect the location of the kohana folder on your server relative to the document root.
-<pre><code class="language-markup">/**
- * Example of kohana's installation at /var/www/kohana and
- * Apache's DocumentRoot configured to /var/www
+<p>Set the base_url in the KO7::init call to reflect the location of the koseven folder on your server relative to the document root.
+<pre><code class="language-php">/**
+ * Example of koseven's installation at /var/www/koseven and
+ * Apache's DocumentRoot configured to /var/www/koseven/public
  */
 Kohana::init(array(
     'base_url' => '/',
@@ -109,7 +109,7 @@ Kohana::init(array(
         <p>Do not forget to escape your dots (.) as these are regex patterns. These patterns should always fully match, as they are prepended with ^ and appended with $.</p>
     </div><!--//content-->
 </div>
-<pre><code class="language-markup">return array(
+<pre><code class="language-php">return array(
     'trusted_hosts' => array(
         'example\.org',
         '.*\.example\.org',
@@ -119,12 +119,12 @@ Kohana::init(array(
 </p>
 
 <p>Define a salt for the Cookie class.
-<pre><code class="language-markup">Cookie::$salt = 'some-really-long-cookie-salt-here';
+<pre><code class="language-php">Cookie::$salt = 'some-really-long-cookie-salt-here';
 </code></pre>
 </p>
 
 <p>Make sure the application/cache and application/logs directories are writable by the web server.
-<pre><code class="language-markup">sudo chmod -R a+rwx application/cache
+<pre><code class="language-php">sudo chmod -R a+rwx application/cache
 sudo chmod -R a+rwx application/logs
 </code></pre>
 </p>
@@ -141,13 +141,13 @@ Once your install page reports that your environment is set up correctly you nee
 <img src="assets/images/start/welcome.png" alt="Welcome Page"/>
 </p>
                                 </div><!--//section-block-->
-                                
+
                             </section><!--//doc-section-->
                         </div><!--//content-inner-->
                     </div><!--//doc-content-->
                     <div class="doc-sidebar col-md-3 col-12 order-0 d-none d-md-flex">
                         <div id="doc-nav" class="doc-nav">
-	                        
+
 	                            <nav id="doc-menu" class="nav doc-menu flex-column sticky">
                                     <a class="scrollto" href="#about-section">About</a>
 	                                <a class="nav-link scrollto" href="#download-section">Download</a>
@@ -158,17 +158,17 @@ Once your install page reports that your environment is set up correctly you nee
                                     </nav>
                                     <a class="nav-link scrollto" href="#configure-section">Configure</a><!--//nav-->
 	                            </nav><!--//doc-menu-->
-	                        
+
                         </div>
                     </div><!--//doc-sidebar-->
-                </div><!--//doc-body-->              
+                </div><!--//doc-body-->
             </div><!--//container-->
         </div><!--//doc-wrapper-->
-        
+
         {% include promo.html %}
-    
-    {% include footer.html %}    
-    
+
+    {% include footer.html %}
+
 </body>
-</html> 
+</html>
 
