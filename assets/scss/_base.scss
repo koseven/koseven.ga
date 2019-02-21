@@ -14,7 +14,7 @@ html, body {
 .page-wrapper {
     min-height: 100%;
     /* equal to footer height */
-    margin-bottom: -50px; 
+    margin-bottom: -50px;
     &:after {
         content: "";
         display: block;
@@ -35,7 +35,7 @@ a {
     @include transition (all 0.4s ease-in-out);
     &:hover {
         text-decoration: underline;
-        color: darken($color-primary, 10%);        
+        color: darken($color-primary, 10%);
     }
     &:focus {
         text-decoration: none;
@@ -45,7 +45,7 @@ a {
 
 code {
     background: #222;
-    color: #fff;
+  color: #fff !important;
     font-size: 14px;
     font-weight: bold;
     font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
@@ -162,14 +162,14 @@ code {
     &:focus {
         border-color: darken($divider, 5%);
         @include box-shadow(none);
-    }    
+    }
 }
 
 input[type="text"],
 input[type="email"],
 input[type="password"],
 input[type="submit"],
-input[type="button"], 
+input[type="button"],
 textarea,
 select {
     appearance: none;  /* for mobile safari */
@@ -261,8 +261,8 @@ select {
                 color: #fff;
             }
         }
-    } 
-    
+    }
+
 }
 
 .breadcrumb>li+li:before {

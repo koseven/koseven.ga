@@ -1,2 +1,9 @@
 .DS_Store
 _site/*
+
+# Project files
+.idea
+nbproject
+*.iml
+out
+gen

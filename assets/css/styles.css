@@ -1,4 +1,4 @@
-/*   
+/*
  * Template Name: PrettyDocs - Bootstrap 4 Template for documentations
  * Version: 2.0
  * Author: Xiaoying Riley
@@ -59,7 +59,7 @@ a:focus {
 
 code {
   background: #222;
-  color: #fff;
+  color: rgb(255, 255, 255) !important;
   font-size: 14px;
   font-weight: bold;
   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
@@ -961,7 +961,7 @@ select {
   top: 15px;
 }
 
-.affix, 
+.affix,
 .affix-bottom {
   width: 230px;
 }
