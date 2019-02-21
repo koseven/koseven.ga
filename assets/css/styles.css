@@ -823,12 +823,35 @@ select {
 }
 
 /* Sidebar */
+.cursor-default {
+  cursor: default;
+}
+
 .doc-nav {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+.doc-nav > ul {
+  padding-left: 1px;
+}
+
+.doc-nav ul li.expandable::before {
+  content: "+ ";
+  cursor: pointer;
+  color: rosybrown;
+}
+
+.doc-nav ul li {
+  list-style: none;
+  margin: 10px 0;
+}
+
+.doc-nav ul li ul {
+  display: none;
 }
 
 .sticky {
