@@ -1,19 +1,14 @@
 - name: yclas
-  description: Platform to create and build classifieds websites
-  screenshot: theme-pillar.png
+  description: Plattform to create and build classifieds websites
+  screenshot: yclas.png
   url: https://yclas.com/
 
-- name: Test2
-  description: Testpage powered by koseven
-  screenshot: theme-pillar.png
-  url: https://www.koseven.ga
-
-- name: Test3
+- name: Example
   description: Testpage powered by koseven
   screenshot: theme-developer.png
   url: https://www.koseven.ga
 
-- name: Test4
+- name: Example2
   description: Testpage powered by koseven
   screenshot: theme-orbit.png
   url: https://www.koseven.ga
