@@ -1,10 +1,10 @@
-## [Userguide](index.html)
+## [Userguide](/documentation/userguide/index)
 
 - Getting Started
-   - [Using the Userguide](using)
-   - [How the Userguide works](works)
-   - [Configuration](config)
+   - [Using the Userguide](/documentation/userguide/using)
+   - [How the Userguide works](/documentation/userguide/works)
+   - [Configuration](/documentation/userguide/config)
 - Learning More
-   - [Contributing](contributing)
-   - [Markdown Syntax](markdown)
-   - [Adding your module](adding)
+   - [Contributing](/documentation/userguide/contributing)
+   - [Markdown Syntax](/documentation/userguide/markdown)
+   - [Adding your module](/documentation/userguide/adding)

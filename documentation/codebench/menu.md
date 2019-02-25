@@ -1,1 +1,1 @@
-## [Codebench](index.html)
+## [Codebench](/documentation/codebench/index)

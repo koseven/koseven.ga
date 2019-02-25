@@ -10,14 +10,14 @@ title: 'Contributors'
             <div class="container">
                 <div class="branding">
                     <h1 class="logo">
-                        <a href="index.html">
+                        <a href="/">
                             <span aria-hidden="true" class="icon_documents_alt icon"></span>
                             <span class="text-highlight">Koseven</span><span class="text-bold">Framework</span>
                         </a>
                     </h1>
                 </div><!--//branding-->
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="/">Home</a></li>
                     <li class="breadcrumb-item active">{{ page.title }}</li>
                 </ol>
             </div><!--//container-->
@@ -48,7 +48,7 @@ title: 'Contributors'
                                                         {% if contributor.tags contains 'website' %}<i class="fas fa-globe" alt="Website" title="Website"></i>{% endif %}
                                                         {% if contributor.tags contains 'documentation' %}<i class="fas fa-book" alt="Documentation" title="Documentation"></i>{% endif %}
                                                         {% if contributor.tags contains 'support' %}<i class="fas fa-headset" alt="Support" title="Support"></i>{% endif %}
-                                                        <br/>                                            
+                                                        <br/>
                                                         Github: <a href="https://github.com/{{ contributor.github }}">{{ contributor.github }}</a><br/>
                                                         {% if contributor.twitter %}
                                                         Twitter: <a href="https://twitter.com/{{ contributor.github }}">{{ contributor.twitter }}</a>
@@ -74,15 +74,15 @@ title: 'Contributors'
                             </nav><!--//doc-menu-->
                         </div>
                     </div><!--//doc-sidebar-->
-                </div><!--//doc-body-->              
+                </div><!--//doc-body-->
             </div><!--//container-->
         </div><!--//doc-wrapper-->
-        
+
         {% include promo.html %}
-        
+
     </div><!--//page-wrapper-->
-    
+
     {% include footer.html %}
 </body>
-</html> 
+</html>
 
