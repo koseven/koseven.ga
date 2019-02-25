@@ -3,7 +3,7 @@ $(document).ready(function() {
 });
 
 function ul_expandable() {
-    let parent_ul = $('.doc-nav ul').first();
+    let parent_ul = $('.content-nav ul').first();
     $(parent_ul).find('> li').each(function() {
         if ($(this).has('> ul').length) {
             $(this).addClass('expandable');
@@ -18,7 +18,7 @@ function ul_expandable() {
 }
 
 
-$('.doc-nav ul li').click(function (e) {
+$('.content-nav ul li').click(function (e) {
     e.stopPropagation();
     if ($(this).hasClass('expandable')) {
         $(this).siblings().find('ul').slideUp();

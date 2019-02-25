@@ -8,91 +8,71 @@ title: 'Modules'
 
         {% include breadcrumbs.html current=page.title %}
 
-        <div class="doc-wrapper">
+        <div class="content-wrapper">
             <div class="container">
-                <div id="doc-header" class="doc-header text-center">
-                    <h1 class="doc-title"><span aria-hidden="true" class="icon icon_puzzle_alt"></span> {{ page.title }}</h1>
-                    <div class="meta"><i class="far fa-clock"></i> Last updated: {{ site.time | date: '%d.%m.%Y' }}</div>
-                </div><!--//doc-header-->
-                <div class="doc-body row">
-                    <div class="doc-content col-md-9 col-12 order-1">
+                <div id="content-header" class="content-header text-center">
+                    <h1 class="content-title">
+                        <span aria-hidden="true" class="icon icon_puzzle_alt"></span>
+                        {{ page.title }}
+                    </h1>
+                    <div class="meta">
+                        <i class="far fa-clock"></i>
+                        Last updated: {{ site.time | date: '%d.%m.%Y' }}
+                    </div>
+                </div>
+                <div class="content-body row">
+                    <div class="col-md-9 col-12 order-1">
                         <div class="content-inner">
-
                             <div class="callout-block callout-success">
                                 <div class="icon-holder">
                                     <i class="fas fa-thumbs-up"></i>
-                                </div><!--//icon-holder-->
+                                </div>
                                 <div class="content">
                                     <h4 class="callout-title">Add your module:</h4>
-                                    <p>
-                                        <ul>
-                                          <li>Only modules with PHP7 and Koseven 3.3.x</li>
-                                        </ul>
-                                        <ol>
-                                          <li>Fork project</li>
-                                          <li>Edit _data/modules.yaml</li>
-                                          <li>Add your module</li>
-                                          <li>Do a Pull Request</li>
-                                          <li>????</li>
-                                          <li>Profit ;)</li>
-                                        </ol>
-                                    </p>
-                                </div><!--//content-->
+                                    <ol style="padding-left: 20px;">
+                                        <li>Fork project</li>
+                                        <li>Edit _data/modules.yaml</li>
+                                        <li>Add your module</li>
+                                        <li>Do a Pull Request</li>
+                                    </ol>
+                                </div>
                             </div>
 
-                            <section id="database" class="doc-section">
-                                <h2 class="section-title">Database</h2>
-                                {% assign filtered-modules = site.data.modules | where:'category','database' %}
-                                {% for module in filtered-modules %}
-                                <div class="section-block">
-                                    <h3 class="question"><i class="fas fa-cube"></i> <a target="_blank" href="{{ module.url }}">{{ module.name }}</a></h3>
-                                    <div class="answer">{{ module.description }}</div>
-                                </div><!--//section-block-->
-                                {% endfor %}
-                            </section><!--//doc-section-->
+                            {% for category in site.data.categories %}
+                                <section id="{{ category.name }}" class="content-section">
+                                    <h2 class="section-title">{{ category.name || capitalize_all }}</h2>
+                                    {% assign filtered-modules = site.data.modules | where:'category',category.name %}
+                                    {% for module in filtered-modules %}
+                                    <div class="section-block">
+                                        <h3 class="question">
+                                            <i class="fas fa-cube"></i>
+                                            <a target="_blank" href="{{ module.url }}">{{ module.name }}</a>
+                                        </h3>
+                                        <div class="answer">{{ module.description }}</div>
+                                    </div>
+                                    {% endfor %}
+                                </section>
+                            {% endfor %}
 
-                            <section id="frontend" class="doc-section">
-                                <h2 class="section-title">Frontend</h2>
-                                {% assign filtered-modules = site.data.modules | where:'category','frontend' %}
-                                {% for module in filtered-modules %}
-                                <div class="section-block">
-                                    <h3 class="question"><i class="fas fa-cube"></i> <a target="_blank" href="{{ module.url }}">{{ module.name }}</a></h3>
-                                    <div class="answer">{{ module.description }}</div>
-                                </div><!--//section-block-->
-                                {% endfor %}
-                            </section><!--//doc-section-->
-
-                            <section id="misc" class="doc-section">
-                                <h2 class="section-title">Misc</h2>
-                                {% assign filtered-modules = site.data.modules | where:'category','misc' %}
-                                {% for module in filtered-modules %}
-                                <div class="section-block">
-                                    <h3 class="question"><i class="fas fa-cube"></i> <a target="_blank" href="{{ module.url }}">{{ module.name }}</a></h3>
-                                    <div class="answer">{{ module.description }}</div>
-                                </div><!--//section-block-->
-                                {% endfor %}
-                            </section><!--//doc-section-->
-
-                        </div><!--//content-inner-->
-                    </div><!--//doc-content-->
-                    <div class="doc-sidebar col-md-3 col-12 order-0 d-none d-md-flex">
-                        <div id="doc-nav" class="doc-nav">
-                            <nav id="doc-menu" class="nav doc-menu flex-column sticky">
-                                <a class="nav-link scrollto" href="#database">Database</a>
-                                <a class="nav-link scrollto" href="#frontend">Frontend</a>
-                                <a class="nav-link scrollto" href="#misc">Misc</a>
-                            </nav><!--//doc-menu-->
                         </div>
-                    </div><!--//doc-sidebar-->
-                </div><!--//doc-body-->
-            </div><!--//container-->
-        </div><!--//doc-wrapper-->
+                    </div>
+                    <div class="content-sidebar col-md-3 col-12 order-0 d-none d-md-flex">
+                        <div id="content-nav" class="content-nav">
+                            <nav id="content-menu" class="nav content-menu flex-column sticky">
+                                {% for category in site.data.categories %}
+                                    <a class="nav-link scrollto" href="#{{ category.name }}">{{ category.name || capitalize_all }}</a>
+                                {% endfor %}
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         {% include promo.html %}
 
-    </div><!--//page-wrapper-->
+    </div>
 
     {% include footer.html %}
 </body>
 </html>
-

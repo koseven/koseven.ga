@@ -1,4 +1,11 @@
-# tags: code, website, documentation, support
+# People who contributed to Koseven.
+#
+# Full Example:
+# - name: Name of Contributor
+#   github: Github Username
+#   county: Country of Contributor
+#   twitter: Twitter Username [Optional]
+#   tags: code, website, documentation, support
 
 - name: Chema
   github: neo22s
@@ -39,7 +46,7 @@
 - name: Tobias Oitzinger
   github: toitzi
   country: Austria
-  tags: code,website,documentation
+  tags: code,website,documentation,support
 
 - name: Anton
   github: WinterSilence

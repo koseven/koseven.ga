@@ -8,15 +8,18 @@ title: 'Documentation'
 
         {% include breadcrumbs.html current=page.title %}
 
-        <div class="doc-wrapper">
+        <div class="content-wrapper">
             <div class="container">
-                <div id="doc-header" class="doc-header text-center">
-                    <h1 class="doc-title"><span aria-hidden="true" class="icon icon_puzzle_alt"></span> {{ page.title }}</h1>
-                </div><!--//doc-header-->
-                <div class="doc-body row" >
-                    <div class="doc-content col-md-9 col-12 order-1">
+                <div id="content-header" class="content-header text-center">
+                    <h1 class="content-title">
+                        <span aria-hidden="true" class="icon icon_puzzle_alt"></span>
+                        {{ page.title }}
+                    </h1>
+                </div>
+                <div class="content-body row">
+                    <div class="col-md-9 col-12 order-1">
                         <div class="content-inner">
-                            <section id="dashboards" class="doc-section">
+                            <section id="dashboards" class="content-section">
                                 <h2 class="section-title">User Guide</h2>
                                 <div class="section-block">
                                     <p>
@@ -65,16 +68,16 @@ title: 'Documentation'
                                         <a href="/documentation/userguide">Userguide</a>
                                         - Documentation viewer and api generation.
                                     </p>
-                                </div><!--//section-block-->
-                            </section><!--//doc-section-->
-                        </div><!--//content-inner-->
-                    </div><!--//doc-content-->
-                    <div class="doc-sidebar col-md-3 col-12 order-0 d-none d-md-flex">
-                        <div id="doc-nav" class="doc-nav">
-                            <nav id="doc-menu" class="nav doc-menu flex-column sticky">
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                    <div class="content-sidebar col-md-3 col-12 order-0 d-none d-md-flex">
+                        <div id="content-nav" class="content-nav">
+                            <nav id="content-menu" class="nav content-menu flex-column sticky">
                                 <a class="nav-link" href="/documentation/system">Core</a>
                                 <a class="nav-link" href="#">Modules</a>
-                                    <nav class="doc-sub-menu nav flex-column">
+                                    <nav class="content-sub-menu nav flex-column">
                                         <a class="nav-link" href="/documentation/auth">Auth</a>
                                         <a class="nav-link" href="/documentation/cache">Cache</a>
                                         <a class="nav-link" href="/documentation/codebench">Codebench</a>
@@ -84,21 +87,20 @@ title: 'Documentation'
                                         <a class="nav-link" href="/documentation/orm">ORM</a>
                                         <a class="nav-link" href="/documentation/unittest">Unittest</a>
                                         <a class="nav-link" href="/documentation/userguide">Userguide</a>
-                                    </nav><!--//nav-->
+                                    </nav>
                                 <a class="nav-link" href="https://docs.koseven.ga/guide-api"
                                    target="_blank">API-Browser</a>
-                            </nav><!--//doc-menu-->
-                        </div><!--//doc-nav-->
-                    </div><!--//doc-sidebar-->
-                </div><!--//doc-body-->
-            </div><!--//container-->
-        </div><!--//doc-wrapper-->
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         {% include promo.html %}
 
-    </div><!--//page-wrapper-->
+    </div>
 
     {% include footer.html %}
 </body>
 </html>
-

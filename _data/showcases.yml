@@ -1,3 +1,10 @@
+# Websites using Koseven.
+#
+# Full Example:
+# - name: Name of Website
+#   description: Short Website Description
+#   screenshot: Path to Website Screenshot (Relative to /assets/images/showcases)
+#   url: URL to Website
 - name: yclas
   description: Plattform to create and build classifieds websites
   screenshot: yclas.png
