@@ -32,7 +32,7 @@ With integrated tools for: <br />
   
 and many more...developing your own Application gets a lot easier.
 
-Released under a [BSD license](LICENSE.md), Koseven can be used legally for any open source, commercial, or personal project.
+Released under a [BSD license](LICENSE), Koseven can be used legally for any open source, commercial, or personal project.
 
 ## I Need help!
 
