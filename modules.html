@@ -40,8 +40,8 @@ title: 'Modules'
 
                             {% for category in site.data.categories %}
                                 <section id="{{ category.name }}" class="content-section">
-                                    <h2 class="section-title">{{ category.name || capitalize_all }}</h2>
-                                    {% assign filtered-modules = site.data.modules | where:'category',category.name %}
+                                    <h2 class="section-title">{{ category.name | capitalize_all }}</h2>
+                                    {% assign filtered-modules = site.data.modules | where:'category', category.name %}
                                     {% for module in filtered-modules %}
                                     <div class="section-block">
                                         <h3 class="question">
@@ -60,7 +60,7 @@ title: 'Modules'
                         <div id="content-nav" class="content-nav">
                             <nav id="content-menu" class="nav content-menu flex-column sticky">
                                 {% for category in site.data.categories %}
-                                    <a class="nav-link scrollto" href="#{{ category.name }}">{{ category.name || capitalize_all }}</a>
+                                    <a class="nav-link scrollto" href="#{{ category.name }}">{{ category.name | capitalize_all }}</a>
                                 {% endfor %}
                             </nav>
                         </div>
