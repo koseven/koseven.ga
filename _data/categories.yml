@@ -1,0 +1,8 @@
+# Categories for Modules page
+#
+# Full Example:
+# - name: Name of Category (lowercase)
+
+- name: database
+- name: frontend
+- name: misc

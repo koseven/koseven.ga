@@ -1,0 +1,26 @@
+<!-- ******Breadcrumb Header ****** -->
+<header id="header" class="header">
+    <div class="container">
+        <div class="branding">
+            <h1 class="logo">
+                <a href="/">
+                    <span aria-hidden="true" class="icon_documents_alt icon"></span>
+                    <span class="text-highlight">Koseven</span>
+                    <span class="text-bold">Framework</span>
+                </a>
+            </h1>
+        </div>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="/">Home</a>
+            </li>
+            {% if include.pre %}
+                <li class="breadcrumb-item">
+                    <a href="/{{ include.pre }}">{{ include.pre | capitalize_all }}</a>
+                </li>
+            {% endif %}
+            <li class="breadcrumb-item active">{{ include.current }}</li>
+        </ol>
+    </div>
+</header>
+<!-- END Breadcrumb Header -->

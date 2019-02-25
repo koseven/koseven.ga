@@ -1,0 +1,42 @@
+{% include head.html %}
+
+<body class="body-pink">
+    <div class="page-wrapper">
+
+        {% include breadcrumbs.html current=page.title pre='documentation' %}
+
+        <div class="content-wrapper">
+            <div class="container">
+                <div class="content-header text-center" id="content-header">
+                    <h1 class="content-title">
+                        <span aria-hidden="true" class="icon icon_puzzle_alt"></span>
+                        {{ page.title }}
+                    </h1>
+                </div>
+                <div class="content-body row">
+                    <div class="col-md-9 col-12 order-1">
+                        <div class="content-inner">
+                            <section class="content-section" id="dashboards">
+                                {{ content }}
+                            </section>
+                        </div>
+                    </div>
+                    <div class="content-sidebar col-md-3 col-12 order-0 d-none d-md-flex">
+                        <div class="content-nav" id="content-nav">
+                            {% capture menu_include %}{% include_relative menu.md %}{% endcapture %}
+                            {{ menu_include | markdownify }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% include promo.html %}
+
+    </div>
+
+    {% include footer.html %}
+
+    <script src="/assets/js/documenation.js"></script>
+</body>
+</html>

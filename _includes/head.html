@@ -2,25 +2,47 @@
 <html lang="en">
 <head>
     <title>{% if page.title %}{{ page.title | escape}} | koseven.ga{% else %}{{ site.title | escape }}{% endif %}</title>
+
     <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">    
-    <!--<link rel="shortcut icon" href="favicon.ico">-->
-    <link rel="icon" type="image/png" href="assets/images/KO7.png" sizes="256x256">
+    <meta name="description" content="Koseven is an elegant, open source, and object oriented HMVC framework built using PHP7, by a team of volunteers. It aims to be swift, secure, and small.">
+    <meta name="author" content="Koseven Team">
+    <meta name=”robots” content="index, follow">
 
+    <!-- Facebook OG !-->
+    <meta property=”og:type” content=”website” />
+    <meta property=”og:title” content="Koseven PHP7+ HMVC Framework" />
+    <meta property=”og:description” content="Koseven is an elegant, open source, and object oriented HMVC framework built using PHP7, by a team of volunteers. It aims to be swift, secure, and small."/>
+    <meta property=”og:image” content="/assets/images/og/koseven.png" />
+    <meta property=”og:url” content="https://koseven.ga" />
+    <meta property=”og:site_name” content="Koseven" />
+
+    <!-- Twitter OG -->
+    <meta name=”twitter:title” content="Koseven PHP7+ HMVC Framework">
+    <meta name=”twitter:description” content="Koseven is an elegant, open source, and object oriented HMVC framework built using PHP7, by a team of volunteers. It aims to be swift, secure, and small.">
+    <meta name=”twitter:image” content="/assets/images/og/koseven.png">
+    <meta name=”twitter:site” content="@KO7_PHP">
+    <meta name=”twitter:creator” content="@KO7_PHP">
+
+    <!--<link rel="shortcut icon" href="favicon.ico">-->
+    <link href="/assets/images/KO7.png" rel="icon" sizes="256x256" type="image/png">
+
+    <!-- Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
     <!-- FontAwesome JS -->
-    <script defer src="https://use.fontawesome.com/releases/v5.1.1/js/all.js" integrity="sha384-BtvRZcyfv4r0x/phJt9Y9HhnN5ur1Z+kZbKVgzVBAlQZX4jvAuImlIz+bG7TS00a" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous"></script>
+
     <!-- Global CSS -->
-    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
-    <!-- Plugins CSS -->    
-    <link rel="stylesheet" href="assets/plugins/prism/prism.css">
-    <link rel="stylesheet" href="assets/plugins/lightbox/dist/ekko-lightbox.css">
-    <link rel="stylesheet" href="assets/plugins/elegant_font/css/style.css">
+    <link href="/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Plugins CSS -->
+    <link href="/assets/plugins/prism/prism.css" rel="stylesheet">
+    <link href="/assets/plugins/lightbox/dist/ekko-lightbox.css" rel="stylesheet">
+    <link href="/assets/plugins/elegant_font/css/style.css" rel="stylesheet">
 
     <!-- Theme CSS -->
-    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+    <link href="/assets/css/styles.css" id="theme-style" rel="stylesheet">
 </head>

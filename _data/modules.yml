@@ -1,4 +1,10 @@
-# Categories: database, frontend, misc
+# Modules for Koseven.
+#
+# Full Example:
+# - name: Name of Module
+#   url: URL to module's download / github page
+#   description: Short description of module
+#   category: database, frontend, misc [ONLY use ONE of them]
 
 - name: Blacksmith
   url: https://github.com/themusicman/Blacksmith

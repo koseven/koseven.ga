@@ -1,79 +1,52 @@
-# Contributing to koseven
+# Contributing to the Website
+Go to https://github.com/koseven/koseven.ga for each repo in the top right theres a button that says Fork. Click there to clone each repo. That will copy the repos to your github user, ex: https://github.com/yourusername/koseven.ga
 
-Koseven is community driven, and we rely on community contributions for the documentation.
-
-## Guidelines
-
-Documentation should use complete sentences, good grammar, and be as clear as possible. Use lots of example code, but make sure the examples follow the Koseven conventions and style.
-
-Try to commit often, with each commit only changing a file or two, rather than changing a ton of files and commiting it all at once. This will make it easier to offer feedback and merge your changes. Make sure your commit messages are clear and descriptive. Bad: "Added docs", Good: "Added initial draft of hello world tutorial", Bad: "Fixed typos", Good: "Fixed typos on the query builder page"
-
-If you feel a menu needs to be rearranged or a module needs new pages, please open a bug report to discuss it.
-
-## Quick Method
-
-To quickly point out something that needs improvement, [open an issue on github](https://github.com/koseven/koseven/issues/new).
-
-If you want to contribute some changes, you can do so right from your browser without even knowing git!
-
-First create an account on [GitHub](https://github.com/signup/free).
-
-You will need to fork the module for the area you want to improve. For example, to improve the ORM documentation fork https://github.com/koseven/koseven/tree/devel/modules/orm and click on the Fork button in the top right.
-
-Fork the module
-
-The files that make the User Guide portion are found in guide/<module>/, and the API browser portion is made from the comments in the source code itself. Navigate to one of the files you want to change and click the edit button in the top right of the file viewer.
-
-Click on edit to edit the file
-
-Make the changes and add a detailed commit message. Repeat this for as many files as you want to improve. (Note that you can't preview what the changes will look unless you actually test it locally.)
-
-After you have made your changes, send a pull request so your improvements can be reviewed to be merged into the official documentation.
-
-Send a pull request
-
-Once your pull request has been accepted, you can delete your repository if you want. Your commit will have been copied to the official branch.
-
-## If you know Git
-### Short version
-
-Fork the module whose docs you wish to improve (e.g. git://github.com/kohana/orm.git or git://github.com/kohana/core.git), checkout the 3.2/develop branch (for the 3.2 docs), make changes, and then send a pull request.
-
-### Long version
-
-(This still assumes you at least know your way around Git, especially how submodules work.)
-
-1. Fork the specific repo you want to contribute to on GitHub. (For example, go to https://github.com/koseven/koseven and click the fork button.)
-
-2. Now you need to add your fork as a "git remote" to your application and ensure you are on the right branch. An example for the ORM module and 3.2 docs:
-
+Clone your project in local and use devel branch
 ```
-cd my-koseven-app/modules/orm
- 
-# add your repository as a new remote
-git remote add <your name> git://github.com/<your name>/orm.git
- 
-# Get the correct branch
-git checkout 3.2/develop
+git clone https://github.com/koseven/koseven.ga .
+cd koseven.ga
+git checkout devel
 ```
 
-3. Now go into the repo of the area of docs you want to contribute to and add your forked repo as a new remote, and push to it.
+This will clone the koseven website
+
+Ready ;)
+
+## How to commit
+If you have made modifications to the code.
 
 ```
-cd my-koseven-app/modules/orm
- 
-# Make some changes to the docs
-nano file.md
- 
-# Commit your changes - Use a descriptive commit message! If there is a redmine ticket for the changes you are making include "Fixes #XXXXX" in the commit message so its tracked.
-git commit -a -m "Corrected a typo in the ORM docs. Fixes #12345."
- 
-# make sure we are up to date with the latest changes
-git merge origin/3.2/develop
- 
-# Now push your changes to your fork.
-git push <your name> 3.2/develop
+git status # to see what's going on
+git commit -a -m 'message here, this will commit the changes on the tracked files'
+git push origin devel # will "upload" the changes to your repo
 ```
 
-4. Finally, send a pull request on GitHub.
+Tricks
+```
+git add . # will add all the files, even new ones
+git add -u # will add all the tracked files even the deleted ones
+git commit -a -m 'working closed etc  #725' # this will commit and mention an issue in the repo
+```
 
+## Pull Requests
+Now you have new code at your fork eg. https://github.com/yourusername/koseven.ga. 
+To move them to the original https://github.com/koseven/koseven.ga repo you need to go to 
+https://github.com/yourusername/koseven.ga, and click on Pull Request (next to compare). This will create a pull request to the original code and the responsible will decide to merge it or not.
+
+Notes:
+- Try to submit pull requests against devel branch for easier merging
+- Try not to pollute your pull request with unintended changes--keep them simple and small
+
+## Keep sync with original repo
+First time, add a remote with the upstream
+```
+git remote add upstream https://github.com/koseven/koseven.ga.git
+```
+
+Everytime you want to sync just
+```
+git fetch upstream
+git merge upstream/devel
+```
+
+Remember to be at you devel branch!
