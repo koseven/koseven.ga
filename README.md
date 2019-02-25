@@ -3,12 +3,13 @@
     <img src="https://i.imgur.com/2CeT8JL.png" />
   </a>
   <br />
-  <b>Website Repository</b>
+  <b>Website Repository (Contains all for the official Koseven Website)</b>
 </p>
 <p align="center">
-  <a href="https://travis-ci.org/koseven/koseven"><img src="https://travis-ci.org/koseven/koseven.svg" alt="Build Status"></a>
-  <a href="https://github.com/koseven/koseven/blob/master/LICENSE.md"><img src="https://poser.pugx.org/koseven/koseven/license.svg" alt="License"></a>
-  <a href="https://koseven.discourse.group/"><img src="https://img.shields.io/badge/Discourse-Join%20Forum-ff9c08.svg?logo=discourse" alt="Forum"></a>
+  <a href="https://github.com/koseven/koseven/archive/master.zip" target="_blank"><img src="https://img.shields.io/badge/download-latest--stable-blue.svg"></a>
+  <a href="https://travis-ci.org/koseven/koseven" target="_blank"><img src="https://travis-ci.org/koseven/koseven.svg" alt="Build Status"></a>
+  <a href="https://github.com/koseven/koseven/blob/master/LICENSE.md" target="_blank"><img src="https://poser.pugx.org/koseven/koseven/license.svg" alt="License"></a>
+  <a href="https://koseven.discourse.group/" target="_blank"><img src="https://img.shields.io/badge/Discourse-Join%20Forum-ff9c08.svg?logo=discourse" alt="Forum"></a>
 </p>
 
 ## About Koseven
