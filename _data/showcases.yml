@@ -9,13 +9,3 @@
   description: Plattform to create and build classifieds websites
   screenshot: yclas.png
   url: https://yclas.com/
-
-- name: Example
-  description: Testpage powered by koseven
-  screenshot: theme-developer.png
-  url: https://www.koseven.ga
-
-- name: Example2
-  description: Testpage powered by koseven
-  screenshot: theme-orbit.png
-  url: https://www.koseven.ga
