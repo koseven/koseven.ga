@@ -76,13 +76,6 @@ foreach ($src = array_merge($modules, $system) as $g)
 		kill('Failed creating "'.$processedDir.'" directories. Please check your folder permissions.', $processedDir);
 	}
 
-	// Holds all dir's where menu.md is already placed
-	$menus = [];
-	$menu = NULL;
-
-
-	$structure = [];
-
 	// Copy all contents into new folder
 	foreach (
 		$iterator = new \RecursiveIteratorIterator(
