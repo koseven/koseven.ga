@@ -20,7 +20,7 @@ For more info on how to make your module have userguide pages, see [Adding your 
 
 ### Images
 
-Any images used in the userguide pages must be in `media/guide/<module>/`.  For example, if a page has `![Image Title](/documentation/userguide/hello-world.jpg)` the image would be located at `media/guide/<module>/hello-world.jpg`.  Images for the ORM module are in `modules/orm/media/guide/orm`, and images for the Kohana docs are in `system/media/guide/kohana`.
+Any images used in the userguide pages must be in `media/guide/<module>/`.  For example, if a page has `![Image Title](hello-world.jpg)` the image would be located at `media/guide/<module>/hello-world.jpg`.  Images for the ORM module are in `modules/orm/media/guide/orm`, and images for the Kohana docs are in `system/media/guide/kohana`.
 
 ### API browser
 

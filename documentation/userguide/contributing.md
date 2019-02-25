@@ -24,17 +24,17 @@ First create an account on [GitHub](https://github.com/signup/free).
 
 You will need to fork the module for the area you want to improve.  For example, to improve the [ORM documentation](/documentation/userguide/../orm) fork <http://github.com/kohana/orm>.  To improve the [Kohana documentation](/documentation/userguide/../kohana), fork <http://github.com/kohana/core>, etc.  So, find the module you want to improve and click on the Fork button in the top right.
 
-![Fork the module](/documentation/userguide/contrib-github-fork.png)
+![Fork the module](/assets/images/documentation/userguide/contrib-github-fork.png)
 
 The files that make the User Guide portion are found in `guide/<module>/`, and the API browser portion is made from the comments in the source code itself.  Navigate to one of the files you want to change and click the edit button in the top right of the file viewer.
 
-![Click on edit to edit the file](/documentation/userguide/contrib-github-edit.png)
+![Click on edit to edit the file](/assets/images/documentation/userguide/contrib-github-edit.png)
 
 Make the changes and add a **detailed commit message**.  Repeat this for as many files as you want to improve. (Note that you can't preview what the changes will look unless you actually test it locally.)
 
 After you have made your changes, send a pull request so your improvements can be reviewed to be merged into the official documentation.
 
-![Send a pull request](/documentation/userguide/contrib-github-pull.png)
+![Send a pull request](/assets/images/documentation/userguide/contrib-github-pull.png)
 
 Once your pull request has been accepted, you can delete your repository if you want.  Your commit will have been copied to the official branch.
 

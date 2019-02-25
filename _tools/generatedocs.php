@@ -106,7 +106,7 @@ foreach ($src = array_merge($modules, $system) as $g)
 				copy($parent.'menu.md', $submenu = $temp.DIRECTORY_SEPARATOR.'menu.md');
 
 				// Fix menu navigation
-				fixLinks($submenu, $processedDir, $folder, TRUE);
+				fixLinks($submenu, $processedDir, $folder, $g, TRUE);
 			}
 		}
 		else
@@ -117,7 +117,7 @@ foreach ($src = array_merge($modules, $system) as $g)
 			copy($item, $dest);
 			if (strpos($dest, 'menu.md') !== FALSE)
 			{
-				fixLinks($dest, $processedDir, $folder, TRUE);
+				fixLinks($dest, $processedDir, $folder, $g, TRUE);
 			}
 			else
 			{
@@ -125,7 +125,7 @@ foreach ($src = array_merge($modules, $system) as $g)
 				$contUTF8 = mb_convert_encoding($content, 'UTF-8',
 					mb_detect_encoding($content, 'UTF-8, ISO-8859-1', TRUE));
 				file_put_contents($dest, "---\nlayout: documentation\ntitle: $title\n---\n".$contUTF8);
-				fixLinks($dest, $processedDir, $folder, FALSE);
+				fixLinks($dest, $processedDir, $folder, $g, FALSE);
 			}
 
 		}
@@ -139,13 +139,14 @@ echo 'Done!';
  * @param string $path			Path to menu.md
  * @param string $processedDir	Directory where files are stored
  * @param string $folder		Current Folder
+ * @param string $module		Module Path
  * @param bool	 $menu			Fix Menu or Text file?
  */
-function fixLinks(string $path, string $processedDir, string $folder, bool $menu)
+function fixLinks(string $path, string $processedDir, string $folder, string $module, bool $menu)
 {
 	// NOTE: files are small and can fit twice in memory
 	$data = file($path);
-	$data = array_map(function($line) use ($processedDir, $folder, $menu)
+	$data = array_map(function($line) use ($processedDir, $folder, $menu, $module)
 	{
 		if ($menu)
 		{
@@ -176,12 +177,40 @@ function fixLinks(string $path, string $processedDir, string $folder, bool $menu
 			// Loop through matches and replace
 			foreach ($initial as $init)
 			{
+				// Standard Replacement
 				$repl =  '/'.$processedDir.'/'.$folder.'/'.$init;
 
-				// API not ported yet
+				// API Replacement, as it is not ported yet
 				if (strpos($init, '../api/') !== FALSE)
 				{
 					$repl = 'https://docs.koseven.ga/guide-api/'. str_replace('../api/', '', $init);
+				}
+
+				// Image Replacement, as they have a different path
+				elseif (strpos($init, '.png') !== FALSE || strpos($init, '.jpg') !== FALSE || strpos($init, '.jpeg') !== FALSE)
+				{
+					// Replacement for images. NOTE: no leading slash as we use this as folder path
+					$repl = 'assets/images/'.$processedDir.'/'.$folder.'/';
+
+					// Image source path
+					$src = dirname($module, 2).DIRECTORY_SEPARATOR.'media'.DIRECTORY_SEPARATOR.'guide'.DIRECTORY_SEPARATOR.$folder.DIRECTORY_SEPARATOR.$init;
+
+					// Skip if file does not exist
+					if ( ! file_exists($src)) {
+						continue;
+					}
+
+					// Recursively create path for images
+					if ( !is_dir($repl) && ! mkdir($repl, 0777, TRUE) && ! is_dir($repl)) {
+						kill('Could not create path for: '.$repl.' . Please check your permissions.', $repl);
+					}
+
+					// Copy File to image directory
+					$repl .= $init;
+					copy($src, $repl);
+
+					// Add slash at the beginning
+					$repl = '/'.$repl;
 				}
 				$line = str_replace(']('.$init.')', ']('.$repl.')', $line);
 			}

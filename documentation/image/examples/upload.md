@@ -134,10 +134,10 @@ When the upload is successfull, a success message is displayed with the uploaded
 
 Below are screenshots for this example.
 
-![Upload image form](/documentation/image/upload_form.jpg)
+![Upload image form](/assets/images/documentation/image/upload_form.jpg)
 
 _Upload image form_
 
-![Upload result page](/documentation/image/upload_result.jpg)
+![Upload result page](/assets/images/documentation/image/upload_result.jpg)
 
 _Upload result form_
