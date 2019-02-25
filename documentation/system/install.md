@@ -72,11 +72,11 @@ sudo chmod -R a+rwx application/logs
 
 You should see the installation page. If it reports any errors, you will need to correct them before continuing.
 
-![Install Page](install.png "Example of install page")
+![Install Page](/assets/images/documentation/system/install.png)
 
 Once your install page reports that your environment is set up correctly you need to either rename or delete `install.php`. Kohana is now installed and you should see the output of the welcome controller:
 
-![Welcome Page](welcome.png "Example of welcome page")
+![Welcome Page](/assets/images/documentation/system/welcome.png)
 
 ## Installing Kohana From GitHub
 

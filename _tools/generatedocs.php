@@ -193,7 +193,7 @@ function fixLinks(string $path, string $processedDir, string $folder, string $mo
 					$repl = 'assets/images/'.$processedDir.'/'.$folder.'/';
 
 					// Image source path
-					$src = dirname($module, 2).DIRECTORY_SEPARATOR.'media'.DIRECTORY_SEPARATOR.'guide'.DIRECTORY_SEPARATOR.$folder.DIRECTORY_SEPARATOR.$init;
+					$src = strtok(dirname($module, 2).DIRECTORY_SEPARATOR.'media'.DIRECTORY_SEPARATOR.'guide'.DIRECTORY_SEPARATOR.basename($module).DIRECTORY_SEPARATOR.$init, ' ');
 
 					// Skip if file does not exist
 					if ( ! file_exists($src)) {
@@ -206,7 +206,7 @@ function fixLinks(string $path, string $processedDir, string $folder, string $mo
 					}
 
 					// Copy File to image directory
-					$repl .= $init;
+					$repl .= strtok($init, ' ');
 					copy($src, $repl);
 
 					// Add slash at the beginning

@@ -17,7 +17,7 @@ The Kohana filesystem is a hierarchy of similar directory structures that cascad
 
 Files that are in directories higher up the include path order take precedence over files of the same name lower down the order, which makes it is possible to overload any file by placing a file with the same name in a "higher" directory:
 
-![Cascading Filesystem Infographic](cascading_filesystem.png)
+![Cascading Filesystem Infographic](/assets/images/documentation/system/cascading_filesystem.png)
 
 This image is only shows certain files, but we can use it to illustrate some examples of the cascading filesystem:
 

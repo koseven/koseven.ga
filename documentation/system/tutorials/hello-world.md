@@ -41,7 +41,7 @@ Lets see what's going on here:
 
 Now if you open your browser and go to http://localhost/index.php/hello you should see something like:
 
-![Hello, World!](hello_world_1.png "Hello, World!")
+![Hello, World!](/assets/images/documentation/system/hello_world_1.png)
 
 ## That was good, but we can do better
 
@@ -76,7 +76,7 @@ Lets change our original controller slightly:
 
 Now lets try running our code...
 
-![Hello, World!](hello_world_2_error.png "Hello, World!")
+![Hello, World!](/assets/images/documentation/system/hello_world_2_error.png)
 
 For some reason Kohana's thrown a wobbly and isn't showing our amazing message.
 
@@ -101,7 +101,7 @@ Let's go and make the view file `application/views/site.php` for our message:
 
 If we refresh the page then we can see the fruits of our labour:
 
-![hello, world! We just wanted to say it!](hello_world_2.png "hello, world! We just wanted to say it!")
+![hello, world! We just wanted to say it!](/assets/images/documentation/system/hello_world_2.png)
 
 ## Stage 3 – Profit!
 
