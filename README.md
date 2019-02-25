@@ -3,7 +3,7 @@
     <img src="https://i.imgur.com/2CeT8JL.png" />
   </a>
   <br />
-  <b>Website Repository (Contains all for the official Koseven Website)</b>
+  <b>Website Repository (Contains all Files for the official Koseven Website)</b>
 </p>
 <p align="center">
   <a href="https://github.com/koseven/koseven/archive/master.zip" target="_blank"><img src="https://img.shields.io/badge/download-latest--stable-blue.svg"></a>
