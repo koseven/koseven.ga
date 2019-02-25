@@ -10,9 +10,9 @@ Kohana ist ein Open-Source-basiertes, [objektorientiertes](http://de.wikipedia.o
 
 ## Was macht Kohana besonders?
 
-Durch den einzigartigen [Dateisystem](about.filesystem)-Aufbau ist alles erweiterbar und man braucht wenige oder keine [Einstellungen](about.configuration) vornehmen. Die [Fehlerbehandlung](debugging.errors) hilft, die Fehlerquelle schnell zu finden, und die [Fehlersuche](debugging) und [Programmanalyse](debugging.profiling) ermöglichen einen Einblick in die Anwendung.
+Durch den einzigartigen [Dateisystem](/documentation/userguide/about.filesystem)-Aufbau ist alles erweiterbar und man braucht wenige oder keine [Einstellungen](/documentation/userguide/about.configuration) vornehmen. Die [Fehlerbehandlung](/documentation/userguide/debugging.errors) hilft, die Fehlerquelle schnell zu finden, und die [Fehlersuche](/documentation/userguide/debugging) und [Programmanalyse](/documentation/userguide/debugging.profiling) ermöglichen einen Einblick in die Anwendung.
 
-Um die Sicherheit deiner Anwendung zu unterstützen, enthält Kohana Werkzeuge für [XSS-Entfernung](security.xss), [Eingabe-berprüfung](security.validation), [signierte Cookies](security.cookies), [Formular](security.forms)- und [HTML](security.html)-Erstellung. Die [Datenbank](security.database)-Schicht bietet Schutz vor [SQL-Injection](http://de.wikipedia.org/wiki/SQL-Injection). Natürlich wurde der gesamte offizielle Quelltext sorgfältig geschrieben und auf Sicherheit geprüft.
+Um die Sicherheit deiner Anwendung zu unterstützen, enthält Kohana Werkzeuge für [XSS-Entfernung](/documentation/userguide/security.xss), [Eingabe-berprüfung](/documentation/userguide/security.validation), [signierte Cookies](/documentation/userguide/security.cookies), [Formular](/documentation/userguide/security.forms)- und [HTML](/documentation/userguide/security.html)-Erstellung. Die [Datenbank](/documentation/userguide/security.database)-Schicht bietet Schutz vor [SQL-Injection](http://de.wikipedia.org/wiki/SQL-Injection). Natürlich wurde der gesamte offizielle Quelltext sorgfältig geschrieben und auf Sicherheit geprüft.
 
 ## Diese Dokumentation ist scheiße!
 

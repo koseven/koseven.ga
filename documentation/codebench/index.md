@@ -32,10 +32,10 @@ Obviously providing a visual representation of the benchmark results, via simple
 
 Below are two screenshots of Codebench in action. `Valid_Color` is a class made for benchmarking different ways to validate hexadecimal HTML color values, e.g. `#FFF`. If you are interested in the story behind the actual regular expressions, take a look at [this topic in the Kohana forums](http://forum.kohanaframework.org/discussion/2192).
 
-![Benchmarking several ways to validate HTML color values](codebench_screenshot1.png)
+![Benchmarking several ways to validate HTML color values](/documentation/codebench/codebench_screenshot1.png)
 **Benchmarking seven ways to validate HTML color values**
 
-![Collapsable results per subject for each method](codebench_screenshot2.png)
+![Collapsable results per subject for each method](/documentation/codebench/codebench_screenshot2.png)
 **Collapsable results per subject for each method**
 
 ## Working with Codebench

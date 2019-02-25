@@ -35,7 +35,7 @@ The following file will serve as our (insultingly simple) demo application for t
 
 ## Install Kohana
 
-[Download and install the Kohana framework](install); from this point on, we'll be referring to the location of the Kohana libraries as the `kohana` directory.
+[Download and install the Kohana framework](/documentation/system/install); from this point on, we'll be referring to the location of the Kohana libraries as the `kohana` directory.
 
 ## Create a common setup file
 

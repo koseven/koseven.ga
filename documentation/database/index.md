@@ -14,8 +14,8 @@ The database module is included with the Kohana 3.0 install, but needs to be ena
         ...
     ));
 
-Next, you will then need to [configure](config) the database module to connect to your database.
+Next, you will then need to [configure](/documentation/database/config) the database module to connect to your database.
 
-Once that is done then you can make [queries](query) and use the [results](results).
+Once that is done then you can make [queries](/documentation/database/query) and use the [results](/documentation/database/results).
 
-The database module also provides a [config driver](../api/Kohana_Config_Database) (for storing [configuration](../kohana/files/config) in the database) and a [session driver](Session_Database).
+The database module also provides a [config driver](/documentation/database/../api/Kohana_Config_Database) (for storing [configuration](../kohana/files/config) in the database) and a [session driver](/documentation/database/Session_Database).

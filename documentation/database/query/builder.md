@@ -246,10 +246,10 @@ Another example to calculate the distance of two geographical points:
 
 ## Executing
 
-Once you are done building, you can execute the query using `execute()` and use [the results](results).
+Once you are done building, you can execute the query using `execute()` and use [the results](/documentation/database/results).
 
     $result = $query->execute();
 
-To use a different database [config group](config) pass either the name or the config object to `execute()`.
+To use a different database [config group](/documentation/database/config) pass either the name or the config object to `execute()`.
 
 	$result = $query->execute('config_name')

@@ -132,14 +132,14 @@ View for `crop/do` action goes to `views/crop/do.php`.
 
 Below are screenshots for this example.
 
-![Original image](crop_orig.jpg)
+![Original image](/documentation/image/crop_orig.jpg)
 
 _Original image to upload_
 
-![Upload image form](crop_form.jpg)
+![Upload image form](/documentation/image/crop_form.jpg)
 
 _Upload image form_
 
-![Upload result page](crop_result.jpg)
+![Upload result page](/documentation/image/crop_result.jpg)
 
 _Upload result form_

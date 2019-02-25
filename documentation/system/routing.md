@@ -6,7 +6,7 @@ title: System
 
 Kohana provides a very powerful routing system.  In essence, routes provide an interface between the urls and your controllers and actions.  With the correct routes you could make almost any url scheme correspond to almost any arrangement of controllers, and you could change one without impacting the other.
 
-As mentioned in the [Request Flow](flow) section, a request is handled by the [Request] class, which will look for a matching [Route] and load the appropriate controller to handle that request.
+As mentioned in the [Request Flow](/documentation/system/flow) section, a request is handled by the [Request] class, which will look for a matching [Route] and load the appropriate controller to handle that request.
 
 [!!] It is important to understand that **routes are matched in the order they are added**, and as soon as a URL matches a route, routing is essentially "stopped" and *the remaining routes are never tried*.  Because the default route matches almost anything, including an empty url, new routes must be place before it.
 

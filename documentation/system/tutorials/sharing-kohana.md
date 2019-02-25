@@ -4,7 +4,7 @@ title: System
 ---
 # Sharing Kohana
 
-Kohana follows a [front controller pattern](http://en.wikipedia.org/wiki/Front_Controller_pattern "Front Controller pattern") (which means that all requests are sent to `index.php`) and as such the [filesystem](files) is very configurable.  Inside of `index.php` you can change the `$application`, `$modules`, and `$system` paths.
+Kohana follows a [front controller pattern](http://en.wikipedia.org/wiki/Front_Controller_pattern "Front Controller pattern") (which means that all requests are sent to `index.php`) and as such the [filesystem](/documentation/system/files) is very configurable.  Inside of `index.php` you can change the `$application`, `$modules`, and `$system` paths.
 
 [!!] There is a security check at the top of every Kohana file to prevent it from being accessed without using the front controller.  Also, the `.htaccess` file should protect those folders as well.  Moving the application, modules, and system directories to a location that cannot be accessed via the web can add another layer of security, but is optional.
 

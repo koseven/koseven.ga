@@ -12,11 +12,11 @@ You can make your own helpers by simply making a class and putting it in the `cl
 
  - **[CLI]** - Parse command line options.
 
- - **[Cookie]** - Covered in more detail on the [Cookies](cookies) page.
+ - **[Cookie]** - Covered in more detail on the [Cookies](/documentation/system/cookies) page.
 
  - **[Date]** - Useful date functions and constants. Time between two dates, convert between am/pm and military, date offset, etc.
  
- - **[Encrypt]** - Covered in more detail on the [Security](security) page.
+ - **[Encrypt]** - Covered in more detail on the [Security](/documentation/system/security) page.
  
  - **[Feed]** - Parse and create RSS feeds.
  
@@ -24,7 +24,7 @@ You can make your own helpers by simply making a class and putting it in the `cl
  
  - **[Form]** - Create HTML form elements. 
  
- - **[Fragment]** - Simple file based caching. Covered in more detail on the [Fragments](fragments) page.
+ - **[Fragment]** - Simple file based caching. Covered in more detail on the [Fragments](/documentation/system/fragments) page.
 
  - **[HTML]** - Useful HTML functions. Encode, obfuscate, create script, anchor, and image tags, etc.
  
@@ -36,7 +36,7 @@ You can make your own helpers by simply making a class and putting it in the `cl
  
  - **[Num]** - Provides locale aware formating and english ordinals (th, st, nd, etc).
  
- - **[Profiler]** - Covered in more detail on the [Profiling](profiling) page.
+ - **[Profiler]** - Covered in more detail on the [Profiling](/documentation/system/profiling) page.
 
  - **[Remote]** - Remote server access helper using [CURL](http://php.net/curl).
  
@@ -44,9 +44,9 @@ You can make your own helpers by simply making a class and putting it in the `cl
  
  - **[Route]** - Create routes, create an internal link using a route.
  
- - **[Security]** - Covered in more detail on the [Security](security) page.
+ - **[Security]** - Covered in more detail on the [Security](/documentation/system/security) page.
  
- - **[Session]** - Covered in more detail on the [Sessions](sessions) page.
+ - **[Session]** - Covered in more detail on the [Sessions](/documentation/system/sessions) page.
  
  - **[Text]** - Autolink, prevent window words, convert a number to text, etc.
  

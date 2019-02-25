@@ -55,14 +55,14 @@ Next, create a folder in your module directory called `guide/<modulename>` and c
 
 The contents of the `menu.md` file is what shows up in the side column and should be formatted like this:
 
-	## [Module Name]()
-	 - [Page name](page-path)
-	 - [This is a Category](category)
-		 - [Sub Page](category/sub-page)
-		 - [Another](category/another)
-			 - [Sub sub page](category/another/sub-page)
+	## [Module Name](/documentation/userguide/)
+	 - [Page name](/documentation/userguide/page-path)
+	 - [This is a Category](/documentation/userguide/category)
+		 - [Sub Page](/documentation/userguide/category/sub-page)
+		 - [Another](/documentation/userguide/category/another)
+			 - [Sub sub page](/documentation/userguide/category/another/sub-page)
 	 - Categories do not have to be a link to a page
-		 - [Etcetera](etc)
+		 - [Etcetera](/documentation/userguide/etc)
 
 You can have items that are not linked pages (a category that doesn't have a corresponding page).
 
@@ -70,10 +70,10 @@ Guide pages can be named or arranged any way you want within that folder (with t
 
 ## Formatting page titles and links
 
-Page paths are relative to `guide/<modulename>`.  So `[Page name](page-name)` would look for `guide/<modulename>/page-name.md` and `[Another](category/another)` would look for `guide/<modulename>/category/another.md`.
+Page paths are relative to `guide/<modulename>`.  So `[Page name](/documentation/userguide/page-name)` would look for `guide/<modulename>/page-name.md` and `[Another](/documentation/userguide/category/another)` would look for `guide/<modulename>/category/another.md`.
 
 The breadcrumbs and page titles are pulled from the `menu.md` file, not the filenames or paths.
 
-To link to the `index.md` page, you should have an empty link, e.g. `[Module Name]()`.  Do not include `.md` in your links.
+To link to the `index.md` page, you should have an empty link, e.g. `[Module Name](/documentation/userguide/)`.  Do not include `.md` in your links.
 
-All user guide pages use [Markdown](markdown).
+All user guide pages use [Markdown](/documentation/userguide/markdown).

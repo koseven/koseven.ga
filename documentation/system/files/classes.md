@@ -6,7 +6,7 @@ title: System
 
 TODO: Brief intro to classes.
 
-[Models](mvc/models) and [Controllers](mvc/controllers) are classes as well, but are treated slightly differently by Kohana.  Read their respective pages to learn more.
+[Models](/documentation/system/mvc/models) and [Controllers](/documentation/system/mvc/controllers) are classes as well, but are treated slightly differently by Kohana.  Read their respective pages to learn more.
 
 ## Helper or Library?
 
@@ -14,7 +14,7 @@ Kohana 3 does not differentiate between "helper" classes and "library" classes l
 
 ## Creating a class
 
-To create a new class, simply place a file in the `classes/` directory at any point in the [Cascading Filesystem](files), that follows the [Class naming conventions](conventions#class-names-and-file-location).  For example, lets create a `Foobar` class.
+To create a new class, simply place a file in the `classes/` directory at any point in the [Cascading Filesystem](/documentation/system/files), that follows the [Class naming conventions](/documentation/system/conventions#class-names-and-file-location).  For example, lets create a `Foobar` class.
 
 	// classes/Foobar.php
 	
@@ -24,7 +24,7 @@ To create a new class, simply place a file in the `classes/` directory at any po
 		}
 	}
 	
-We can now call `Foobar::magic()` any where and Kohana will [autoload](autoloading) the file for us.
+We can now call `Foobar::magic()` any where and Kohana will [autoload](/documentation/system/autoloading) the file for us.
 
 We can also put classes in subdirectories.
 

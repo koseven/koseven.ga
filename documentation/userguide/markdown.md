@@ -6,7 +6,7 @@ title: Userguide
 
 The userguide uses [Markdown](http://daringfireball.net/projects/markdown/) and [Markdown Extra](http://michelf.com/projects/php-markdown/extra/) for the userguide pages, and the in-code comments used to generate the API browser.  This is a brief summary of most of Markdown and Markdown extra features.  It does not cover everything, and it does not cover all the caveats.
 
-[!!] Be sure to check out the **[Userguide Specific Syntax](#userguide-specific-syntax)** for things that Userguide adds to markdown.
+[!!] Be sure to check out the **[Userguide Specific Syntax](/documentation/userguide/#userguide-specific-syntax)** for things that Userguide adds to markdown.
 
 ## Headers
 
@@ -149,11 +149,11 @@ _____________________
 
 Image syntax looks like this:
 
-	![Alt text](/path/to/img.jpg)
+	![Alt text](/documentation/userguide//path/to/img.jpg)
 	
-	![Alt text](/path/to/img.jpg "Optional title")
+	![Alt text](/documentation/userguide//path/to/img.jpg "Optional title")
 
-[!!] Note that the images in userguide are [namespaced](#namespacing).
+[!!] Note that the images in userguide are [namespaced](/documentation/userguide/#namespacing).
 
 ## Tables
 ~~~
@@ -188,13 +188,13 @@ In addition to the features and syntax of [Markdown](http://daringfireball.net/p
 
 ## Namespacing
 
-The first thing to note is that all links are "namespaced" to the current module.  For example, from anywhere within the Kohana core docs you do not need to include `kohana` at the beginning of a link url.  For example: `[Hello World Tutorial](tutorials/hello-world)` rather than `(kohana/tutorials/hello-world)`.
+The first thing to note is that all links are "namespaced" to the current module.  For example, from anywhere within the Kohana core docs you do not need to include `kohana` at the beginning of a link url.  For example: `[Hello World Tutorial](/documentation/userguide/tutorials/hello-world)` rather than `(kohana/tutorials/hello-world)`.
 
-To link to a modules index page, have an empty url like: `[Kohana]()`.
+To link to a modules index page, have an empty url like: `[Kohana](/documentation/userguide/)`.
 
-To link to page in a different module, prefix your url with `../` and the module name.  For example: `[Kohana Routes](../kohana/routing)`
+To link to page in a different module, prefix your url with `../` and the module name.  For example: `[Kohana Routes](/documentation/userguide/../kohana/routing)`
 
-**Images are also namespaced**, using `![Alt Text](imagename.jpg)` would look for `media/guide/<modulename>/imagename.jpg`.
+**Images are also namespaced**, using `![Alt Text](/documentation/userguide/imagename.jpg)` would look for `media/guide/<modulename>/imagename.jpg`.
 
 [!!] If you want your userguide pages to be browsable on github or similar sites outside Kohana's own userguide module, specify the optional .md file extension in your links
 

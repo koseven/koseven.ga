@@ -4,7 +4,7 @@ title: Database
 ---
 # Configuration
 
-The default config file is located in `MODPATH/database/config/database.php`.  You should copy this file to `APPPATH/config/database.php` and make changes there, in keeping with the [cascading filesystem](../kohana/files).
+The default config file is located in `MODPATH/database/config/database.php`.  You should copy this file to `APPPATH/config/database.php` and make changes there, in keeping with the [cascading filesystem](/documentation/database/../kohana/files).
 
 The database configuration file contains an array of configuration groups. The structure of each database configuration group, called an "instance", looks like this:
 
@@ -28,7 +28,7 @@ CONNECTION_ARRAY
 :  Specific driver options for connecting to your database. (Driver options are explained [below](#connection-settings).)
 
 TABLE_PREFIX
-:  Prefix that will be added to all table names by the [query builder](#query_building).
+:  Prefix that will be added to all table names by the [query builder](/documentation/database/#query_building).
 
 CHARACTER_SET
 :  The character set to use for the connection with the database.

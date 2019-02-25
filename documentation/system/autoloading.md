@@ -14,7 +14,7 @@ Or to load an [Encrypt] instance, just call [Encrypt::instance]:
 
 Classes are loaded via the [Kohana::auto_load] method, which makes a simple conversion from class name to file name:
 
-1. Classes are placed in the `classes/` directory of the [filesystem](files)
+1. Classes are placed in the `classes/` directory of the [filesystem](/documentation/system/files)
 2. Any underscore characters in the class name are converted to slashes
 2. The filename must match the case of the class
 

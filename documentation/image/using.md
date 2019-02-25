@@ -113,4 +113,4 @@ There are more methods available for the [Image] module which provides powerfull
 * [Image::sharpen()] - Sharpen the image by a given amount.
 * [Image::watermark()] - Add a watermark to an image with a specified opacity.
 
-Next: [Examples](examples)
+Next: [Examples](/documentation/image/examples)

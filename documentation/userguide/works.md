@@ -4,7 +4,7 @@ title: Userguide
 ---
 # How the Userguide works
 
-The userguide uses [Markdown](markdown) for the documentation.  Both the userguide pages, and the in code comments for the API browser are written in markdown.
+The userguide uses [Markdown](/documentation/userguide/markdown) for the documentation.  Both the userguide pages, and the in code comments for the API browser are written in markdown.
 
 ## Userguide pages
 
@@ -16,11 +16,11 @@ Each module's menu is at `guide/<module>/menu.md`.
 
 All other pages are are in `guide/<module>` and can be organized in subfolders and named however you want.
 
-For more info on how to make your module have userguide pages, see [Adding your module](adding).
+For more info on how to make your module have userguide pages, see [Adding your module](/documentation/userguide/adding).
 
 ### Images
 
-Any images used in the userguide pages must be in `media/guide/<module>/`.  For example, if a page has `![Image Title](hello-world.jpg)` the image would be located at `media/guide/<module>/hello-world.jpg`.  Images for the ORM module are in `modules/orm/media/guide/orm`, and images for the Kohana docs are in `system/media/guide/kohana`.
+Any images used in the userguide pages must be in `media/guide/<module>/`.  For example, if a page has `![Image Title](/documentation/userguide/hello-world.jpg)` the image would be located at `media/guide/<module>/hello-world.jpg`.  Images for the ORM module are in `modules/orm/media/guide/orm`, and images for the Kohana docs are in `system/media/guide/kohana`.
 
 ### API browser
 

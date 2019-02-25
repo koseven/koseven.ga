@@ -113,7 +113,7 @@ foreach ($src = array_merge($modules, $system) as $g)
 				copy($parent.'menu.md', $submenu = $temp.DIRECTORY_SEPARATOR.'menu.md');
 
 				// Fix menu navigation
-				fixMenu($submenu, $processedDir, $folder);
+				fixLinks($submenu, $processedDir, $folder, TRUE);
 			}
 		}
 		else
@@ -124,7 +124,7 @@ foreach ($src = array_merge($modules, $system) as $g)
 			copy($item, $dest);
 			if (strpos($dest, 'menu.md') !== FALSE)
 			{
-				fixMenu($dest, $processedDir, $folder);
+				fixLinks($dest, $processedDir, $folder, TRUE);
 			}
 			else
 			{
@@ -132,6 +132,7 @@ foreach ($src = array_merge($modules, $system) as $g)
 				$contUTF8 = mb_convert_encoding($content, 'UTF-8',
 					mb_detect_encoding($content, 'UTF-8, ISO-8859-1', TRUE));
 				file_put_contents($dest, "---\nlayout: documentation\ntitle: $title\n---\n".$contUTF8);
+				fixLinks($dest, $processedDir, $folder, FALSE);
 			}
 
 		}
@@ -145,21 +146,44 @@ echo 'Done!';
  * @param string $path			Path to menu.md
  * @param string $processedDir	Directory where files are stored
  * @param string $folder		Current Folder
+ * @param bool	 $menu			Fix Menu or Text file?
  */
-function fixMenu(string $path, string $processedDir, string $folder)
+function fixLinks(string $path, string $processedDir, string $folder, bool $menu)
 {
-	// NOTE: menu files are very small and can fit twice in memory
+	// NOTE: files are small and can fit twice in memory
 	$data = file($path);
-	$data = array_map(function($line) use ($processedDir, $folder)
+	$data = array_map(function($line) use ($processedDir, $folder, $menu)
 	{
-		if (strpos($line, '(') !== FALSE)
+		if ($menu)
 		{
-			$repl = '/'.$processedDir.'/'.$folder.'/'.preg_replace('#[^()]*\((([^()]+|(?R))*)\)[^()]*#', '\1', $line);
-			if (strpos($line, '##') !== FALSE)
+			if (strpos($line, '(') !== FALSE)
 			{
-				$repl = '/'.$processedDir.'/'.$folder.'/'.'index';
+				$repl = '/'.$processedDir.'/'.$folder.'/'.preg_replace('#[^()]*\((([^()]+|(?R))*)\)[^()]*#', '\1', $line);
+				if (strpos($line, '##') !== FALSE)
+				{
+					$repl = '/'.$processedDir.'/'.$folder.'/'.'index';
+				}
+				return preg_replace("/\(([^()]*+|(?R))*\)/", '('.$repl.')', $line);
 			}
-			return preg_replace("/\(([^()]*+|(?R))*\)/", '('.$repl.')', $line);
+			return $line;
+		}
+		if (strpos($line, '](') !== FALSE)
+		{
+			// One Line can contain multiple links, therefore we need to use preg_replace_callback to be able to loop through them
+			$initial = [];
+			$result = preg_replace_callback('#[^()]*\((([^()]+|(?R))*)\)[^()]*#', function ($matches) use (&$initial)
+			{
+				// Don't update external links
+				if (strpos($matches[1], 'http') === FALSE) {
+					$initial[] = $matches[1];
+				}
+			}, $line);
+
+			// Loop through matches and replace
+			foreach ($initial as $init) {
+				$repl =  '/'.$processedDir.'/'.$folder.'/'.$init;
+				$line = str_replace(']('.$init.')', ']('.$repl.')', $line);
+			}
 		}
 		return $line;
 	}, $data);

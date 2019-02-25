@@ -6,7 +6,7 @@ title: System
 
 A Controller is a class file that stands in between the models and the views in an application. It passes information on to the model when data needs to be changed and it requests information from the model when data needs to be loaded. Controllers then pass on the information of the model to the views where the final output can be rendered for the users.  Controllers essentially control the flow of the application.
 
-Controllers are called by the [Request::execute()] function based on the [Route] that the url matched.  Be sure to read the [routing](routing) page to understand how to use routes to map urls to your controllers.
+Controllers are called by the [Request::execute()] function based on the [Route] that the url matched.  Be sure to read the [routing](/documentation/system/routing) page to understand how to use routes to map urls to your controllers.
 
 ## Creating Controllers
 
@@ -33,7 +33,7 @@ Controllers can be in sub-folders:
 	// classes/Controller/Product/Category.php
 	class Controller_Product_Category extends Controller {
 	
-[!!] Note that controllers in sub-folders can not be called by the default route, you will need to define a route that has a [directory](routing#directory) param or sets a default value for directory.
+[!!] Note that controllers in sub-folders can not be called by the default route, you will need to define a route that has a [directory](/documentation/system/routing#directory) param or sets a default value for directory.
 
 Controllers can extend other controllers.
 
@@ -63,23 +63,23 @@ Here is a partial list of the properties and methods available to `$this->reques
 
 Property/method | What it does
 --- | ---
-[$this->request->route()](../api/Request#property:route) | The [Route] that matched the current request url
-[$this->request->directory()](../api/Request#property:directory), <br /> [$this->request->controller](../api/Request#property:controller), <br /> [$this->request->action](../api/Request#property:action) | The directory, controller and action that matched for the current route
-[$this->request->param()](../api/Request#param) | Any other params defined in your route
+[$this->request->route()](/documentation/system/../api/Request#property:route) | The [Route] that matched the current request url
+[$this->request->directory()](/documentation/system/../api/Request#property:directory), <br /> [$this->request->controller](/documentation/system/../api/Request#property:controller), <br /> [$this->request->action](/documentation/system/../api/Request#property:action) | The directory, controller and action that matched for the current route
+[$this->request->param()](/documentation/system/../api/Request#param) | Any other params defined in your route
 
 ## $this->response
-[$this->response->body()](../api/Response#property:body) | The content to return for this request
-[$this->response->status()](../api/Response#property:status) | The HTTP status for the request (200, 404, 500, etc.)
-[$this->response->headers()](../api/Response#property:headers) | The HTTP headers to return with the response
+[$this->response->body()](/documentation/system/../api/Response#property:body) | The content to return for this request
+[$this->response->status()](/documentation/system/../api/Response#property:status) | The HTTP status for the request (200, 404, 500, etc.)
+[$this->response->headers()](/documentation/system/../api/Response#property:headers) | The HTTP headers to return with the response
 
 
 ## Actions
 
 You create actions for your controller by defining a public function with an `action_` prefix.  Any method that is not declared as `public` and prefixed with `action_` can NOT be called via routing.
 
-An action method will decide what should be done based on the current request, it *controls* the application.  Did the user want to save a blog post?  Did they provide the necessary fields?   Do they have permission to do that?  The controller will call other classes, including models, to accomplish this.  Every action should set `$this->response->body($view)` to the [view file](mvc/views) to be sent to the browser, unless it redirected or otherwise ended the script earlier.
+An action method will decide what should be done based on the current request, it *controls* the application.  Did the user want to save a blog post?  Did they provide the necessary fields?   Do they have permission to do that?  The controller will call other classes, including models, to accomplish this.  Every action should set `$this->response->body($view)` to the [view file](/documentation/system/mvc/views) to be sent to the browser, unless it redirected or otherwise ended the script earlier.
 
-A very basic action method that simply loads a [view](mvc/views) file.
+A very basic action method that simply loads a [view](/documentation/system/mvc/views) file.
 
 	public function action_hello()
 	{

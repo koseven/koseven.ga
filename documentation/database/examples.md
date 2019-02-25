@@ -12,7 +12,7 @@ TODO: 4-6 examples of parameterized statements of varying complexity, including 
 
 ## Pagination and search/filter
 
-In this example, we loop through an array of whitelisted input fields and for each allowed non-empty value we add it to the search query. We make a clone of the query and then execute that query to count the total number of results. The count is then passed to the [Pagination](../pagination) class to determine the search offset. The last few lines search with Pagination's items_per_page and offset values to return a page of results based on the current page the user is on.
+In this example, we loop through an array of whitelisted input fields and for each allowed non-empty value we add it to the search query. We make a clone of the query and then execute that query to count the total number of results. The count is then passed to the [Pagination](/documentation/database/../pagination) class to determine the search offset. The last few lines search with Pagination's items_per_page and offset values to return a page of results based on the current page the user is on.
 
 	$query = DB::select()->from('users');
 	

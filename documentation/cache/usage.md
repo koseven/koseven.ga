@@ -13,7 +13,7 @@ Creating a new _Kohana Cache_ instance is simple, however it must be done using 
      // Create a new instance of cache using the default group
      $cache = Cache::instance();
 
-The default group will use whatever is set to [Cache::$default] and must have a corresponding [configuration](config) definition for that group.
+The default group will use whatever is set to [Cache::$default] and must have a corresponding [configuration](/documentation/cache/config) definition for that group.
 
 To create a cache instance using a group other than the _default_, simply provide the group name as an argument.
 

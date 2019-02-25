@@ -80,4 +80,4 @@ public function get_user($default = NULL)
 
 ## Activating the Driver
 
-After you create your driver you will want to use it. It is a easy as setting the `driver` [configuration](config) option to the name of your driver (in our case `example`).
+After you create your driver you will want to use it. It is a easy as setting the `driver` [configuration](/documentation/auth/config) option to the name of your driver (in our case `example`).

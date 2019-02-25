@@ -16,7 +16,7 @@ Creating a request is very easy:
 
 ### Internal Requests
 
-An internal request is a request calling to the internal application. It utilizes [routes](routing) to direct the application based on the URI that is passed to it. A basic internal request might look something like:
+An internal request is a request calling to the internal application. It utilizes [routes](/documentation/system/routing) to direct the application based on the URI that is passed to it. A basic internal request might look something like:
 
 	$request = Request::factory('welcome');
 
@@ -55,7 +55,7 @@ You can use this to scrape HTML from a remote site, or make a REST call to a thi
 
 ## Executing Requests
 
-To execute a request, use the `execute()` method on it. This will give you a [response](responses) object.
+To execute a request, use the `execute()` method on it. This will give you a [response](/documentation/system/responses) object.
 
 	$request = Request::factory('welcome');
 	$response = $request->execute();

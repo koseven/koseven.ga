@@ -39,4 +39,4 @@ Kohana::modules(array(
 ));
 ~~~
 
-Next: [Using the image module](using).
+Next: [Using the image module](/documentation/image/using).

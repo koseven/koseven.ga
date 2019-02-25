@@ -14,7 +14,7 @@ Folgende Regeln gelten:
 
 1. Binnenversalien (camelCase) sollten nicht benutzt werden, außer wenn eine weitere Ordner-Ebene unerwünscht ist
 2. alle Datei- und Verzeichnisnamen in Kleinbuchstaben
-3. alle Klassen werden im `classes`-Verzeichnis in jeder Ebene des [Kaskaden-Dateisystem](about.filesystem) zusammengefasst
+3. alle Klassen werden im `classes`-Verzeichnis in jeder Ebene des [Kaskaden-Dateisystem](/documentation/userguide/about.filesystem) zusammengefasst
 
 [!!] Im Gegensatz zu Kohana v2.x besteht keine Unterteilung zwischen "Controllern", "Models", "Bibliotheken" und "Helfern". Alle Klassen befinden sich im "classes/"-Verzeichnis, unabhängig ob es statische "Helfer" oder Objekt-"Bibliotheken" sind. Man kann irgendeinen Klassen-Aufbau (statische Klasse, Singleton, Adapter) verwenden, den man mag.
 

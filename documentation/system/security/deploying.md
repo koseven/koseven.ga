@@ -8,7 +8,7 @@ Changes that should happen when you deploy. (Production)
 
 There are a few things you'll want to do with your application before moving into production.
 
-1. See the [Bootstrap page](bootstrap) in the docs.
+1. See the [Bootstrap page](/documentation/system/bootstrap) in the docs.
    This covers most of the global settings that would change between environments.
    As a general rule, you should enable caching and disable profiling ([Kohana::init] settings) for production sites.
    [Route::cache] can also help if you have a lot of routes.

@@ -17,7 +17,7 @@ The Kohana filesystem is a hierarchy of similar directory structures that cascad
 
 Files that are in directories higher up the include path order take precedence over files of the same name lower down the order, which makes it is possible to overload any file by placing a file with the same name in a "higher" directory:
 
-![Cascading Filesystem Infographic](cascading_filesystem.png)
+![Cascading Filesystem Infographic](/documentation/system/cascading_filesystem.png)
 
 This image is only shows certain files, but we can use it to illustrate some examples of the cascading filesystem:
 
@@ -25,30 +25,30 @@ This image is only shows certain files, but we can use it to illustrate some exa
 
 * If we used `View::factory('welcome')` it would call `Kohana::find_file('views','welcome')` which would return `application/views/welcome.php` because it takes precidence over `modules/common/views/welcome.php`.  By doing this, you can overwrite things in a module without editing the modules files.
 
-* If use the Cookie class, [Kohana::auto_load] will call `Kohana::find_file('classes', 'Cookie')` which will return `application/classes/Cookie.php`.  Assuming Cookie extends Kohana_Cookie, the autoloader would then call `Kohana::find_file('classes','Kohana/Cookie')` which will return `system/classes/Kohana/Cookie.php` because that file does not exist anywhere higher in the cascade.  This is an example of [transparent extension](extension).
+* If use the Cookie class, [Kohana::auto_load] will call `Kohana::find_file('classes', 'Cookie')` which will return `application/classes/Cookie.php`.  Assuming Cookie extends Kohana_Cookie, the autoloader would then call `Kohana::find_file('classes','Kohana/Cookie')` which will return `system/classes/Kohana/Cookie.php` because that file does not exist anywhere higher in the cascade.  This is an example of [transparent extension](/documentation/system/extension).
 
 * If you used `View::factory('user')` it would call `Kohana::find_file('views','user')` which would return `modules/common/views/user.php`.
 
-* If we wanted to change something in `config/database.php` we could copy the file to `application/config/database.php` and make the changes there.  Keep in mind that [config files are merged](files/config#merge) rather than overwritten by the cascade.
+* If we wanted to change something in `config/database.php` we could copy the file to `application/config/database.php` and make the changes there.  Keep in mind that [config files are merged](/documentation/system/files/config#merge) rather than overwritten by the cascade.
 
 ## Types of Files
 
 The top level directories of the application, module, and system paths have the following default directories:
 
 classes/
-:  All classes that you want to [autoload](autoloading) should be stored here. This includes [controllers](mvc/controllers), [models](mvc/models), and all other classes. All classes must follow the [class naming conventions](conventions#class-names-and-file-location) including matching the case of the class i.e. Kohana_Cookie should be stored in classes/Kohana/Cookie.php and not classes/kohana/cookie.php.
+:  All classes that you want to [autoload](/documentation/system/autoloading) should be stored here. This includes [controllers](/documentation/system/mvc/controllers), [models](/documentation/system/mvc/models), and all other classes. All classes must follow the [class naming conventions](/documentation/system/conventions#class-names-and-file-location) including matching the case of the class i.e. Kohana_Cookie should be stored in classes/Kohana/Cookie.php and not classes/kohana/cookie.php.
 
 config/
-:  Configuration files return an associative array of options that can be loaded using [Kohana::$config]. Config files are merged rather than overwritten by the cascade. See [config files](files/config) for more information.
+:  Configuration files return an associative array of options that can be loaded using [Kohana::$config]. Config files are merged rather than overwritten by the cascade. See [config files](/documentation/system/files/config) for more information.
 
 i18n/
-:  Translation files return an associative array of strings. Translation is done using the `__()` method. To translate "Hello, world!" into Spanish, you would call `__('Hello, world!')` with [I18n::$lang] set to "es-es". I18n files are merged rather than overwritten by the cascade. See [I18n files](files/i18n) for more information.
+:  Translation files return an associative array of strings. Translation is done using the `__()` method. To translate "Hello, world!" into Spanish, you would call `__('Hello, world!')` with [I18n::$lang] set to "es-es". I18n files are merged rather than overwritten by the cascade. See [I18n files](/documentation/system/files/i18n) for more information.
 
 messages/
-:  Message files return an associative array of strings that can be loaded using [Kohana::message]. Messages and i18n files differ in that messages are not translated, but always written in the default language and referred to by a single key. Message files are merged rather than overwritten by the cascade. See [message files](files/messages) for more information.
+:  Message files return an associative array of strings that can be loaded using [Kohana::message]. Messages and i18n files differ in that messages are not translated, but always written in the default language and referred to by a single key. Message files are merged rather than overwritten by the cascade. See [message files](/documentation/system/files/messages) for more information.
 
 views/
-:  Views are plain PHP files which are used to generate HTML or other output. The view file is loaded into a [View] object and assigned variables, which it then converts into an HTML fragment. Multiple views can be used within each other. See [views](mvc/views) for more information.
+:  Views are plain PHP files which are used to generate HTML or other output. The view file is loaded into a [View] object and assigned variables, which it then converts into an HTML fragment. Multiple views can be used within each other. See [views](/documentation/system/mvc/views) for more information.
 
 *other*
 :  You can include any other folders in your cascading filesystem.  Examples include, but are not limited to, `guide`, `vendor`, `media`, whatever you want.  For example, to find `media/logo.png` in the cascading filesystem you would call `Kohana::find_file('media','logo','png')`.

@@ -105,8 +105,8 @@ The rendering of image uses some caching mechanism. One by setting the max age a
 
 Visiting [http://localhost/kohana/imagefly/kitteh/400/400](http://localhost/kohana/imagefly/kitteh/400/400) yields:
 
-![Kitten 400x400](dynamic-400.jpg)
+![Kitten 400x400](/documentation/image/dynamic-400.jpg)
 
 Visiting [http://localhost/kohana/imagefly/kitteh/600/500](http://localhost/kohana/imagefly/kitteh/600/500) yields:
 
-![Kitten 400x400](dynamic-600.jpg)
+![Kitten 400x400](/documentation/image/dynamic-600.jpg)

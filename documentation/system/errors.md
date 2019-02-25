@@ -39,7 +39,7 @@ If you get a white screen when an error is triggered, your host probably has dis
 
     ini_set('display_errors', TRUE);
 
-Errors should **always** be displayed, even in production, because it allows you to use [exception and error handling](debugging.errors) to serve a nice error page rather than a blank white screen when an error happens.
+Errors should **always** be displayed, even in production, because it allows you to use [exception and error handling](/documentation/system/debugging.errors) to serve a nice error page rather than a blank white screen when an error happens.
 
 ## HTTP Exception Handling
 

@@ -10,7 +10,7 @@ The bootstrap is located at `application/bootstrap.php`.  It is responsible for 
 
 ## Environment setup
 
-The bootstrap first sets the timezone and locale, and then adds Kohana's autoloader so the [cascading filesystem](files) works.  You could add any other settings that all your application needed here.
+The bootstrap first sets the timezone and locale, and then adds Kohana's autoloader so the [cascading filesystem](/documentation/system/files) works.  You could add any other settings that all your application needed here.
 
 ~~~
 // Sample excerpt from bootstrap.php with comments trimmed down
@@ -30,7 +30,7 @@ ini_set('unserialize_callback_func', 'spl_autoload_call');
 
 ## Initialization and Configuration
 
-Kohana is then initialized by calling [Kohana::init], and the log and [config](files/config) reader/writers are enabled.
+Kohana is then initialized by calling [Kohana::init], and the log and [config](/documentation/system/files/config) reader/writers are enabled.
 
 ~~~
 // Sample excerpt from bootstrap.php with comments trimmed down
@@ -84,9 +84,9 @@ Kohana::init(array(
 
 ## Modules
 
-**Read the [Modules](modules) page for a more detailed description.**
+**Read the [Modules](/documentation/system/modules) page for a more detailed description.**
 
-[Modules](modules) are then loaded using [Kohana::modules()].  Including modules is optional.
+[Modules](/documentation/system/modules) are then loaded using [Kohana::modules()].  Including modules is optional.
 
 Each key in the array should be the name of the module, and the value is the path to the module, either relative or absolute.
 ~~~
@@ -101,9 +101,9 @@ Kohana::modules(array(
 
 ## Routes
 
-**Read the [Routing](routing) page for a more detailed description and more examples.**
+**Read the [Routing](/documentation/system/routing) page for a more detailed description and more examples.**
 
-[Routes](routing) are then defined via [Route::set()].
+[Routes](/documentation/system/routing) are then defined via [Route::set()].
 
 ~~~
 // The default route that comes with Kohana 3

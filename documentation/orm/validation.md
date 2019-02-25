@@ -112,4 +112,4 @@ Because the validation object was passed as a parameter to the model, any errors
 
 This ensures that errors from multiple validation objects and models will never overwrite each other.
 
-[!!] The power of the [ORM_Validation_Exception] can be leveraged in many different ways to merge errors from related models. Take a look at the list of [Examples](examples) for some great use cases.
+[!!] The power of the [ORM_Validation_Exception] can be leveraged in many different ways to merge errors from related models. Take a look at the list of [Examples](/documentation/orm/examples) for some great use cases.

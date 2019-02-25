@@ -19,7 +19,7 @@ title: System
 
 You can get the latest **stable** release on the [Koseven website](https://koseven.ga/). This will give you a fully functional application with an `application`, `modules`, and `system` directory.
 
-[!!] You can find information about the file structure on the [Cascading Filesystem](files) page.
+[!!] You can find information about the file structure on the [Cascading Filesystem](/documentation/system/files) page.
 
 Once downloaded, you should extract the Kohana application to a directory where the web server can access it. Going forward, we are going to assume you've extracted the application to a `kohana` directory such that `http://localhost/kohana/index.php` is pointing to the `index.php` file in the Kohana release.
 
@@ -66,17 +66,17 @@ sudo chmod -R a+rwx application/cache
 sudo chmod -R a+rwx application/logs
 ~~~
 
-[!!] Make sure to use a unique salt for your application and never to share it. Take a look at the [Cookies](cookies) page for more information on how cookies work in Kohana. If you do not define a `Cookie::$salt` value, Kohana will throw an exception when it encounters any cookie on your domain.
+[!!] Make sure to use a unique salt for your application and never to share it. Take a look at the [Cookies](/documentation/system/cookies) page for more information on how cookies work in Kohana. If you do not define a `Cookie::$salt` value, Kohana will throw an exception when it encounters any cookie on your domain.
 
  - Test your installation by opening [http://localhost/](http://localhost/).
 
 You should see the installation page. If it reports any errors, you will need to correct them before continuing.
 
-![Install Page](install.png "Example of install page")
+![Install Page](/documentation/system/install.png "Example of install page")
 
 Once your install page reports that your environment is set up correctly you need to either rename or delete `install.php`. Kohana is now installed and you should see the output of the welcome controller:
 
-![Welcome Page](welcome.png "Example of welcome page")
+![Welcome Page](/documentation/system/welcome.png "Example of welcome page")
 
 ## Installing Kohana From GitHub
 
@@ -87,4 +87,4 @@ Use the following command to install Kohana from GitHub:
 git clone git@github.com:koseven/koseven.git .
 ~~~
 
-[!!] For more information on installing Kohana using git, see the [Working with Git](tutorials/git) tutorial.
+[!!] For more information on installing Kohana using git, see the [Working with Git](/documentation/system/tutorials/git) tutorial.

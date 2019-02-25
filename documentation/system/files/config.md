@@ -22,7 +22,7 @@ If the above configuration file was called `myconf.php`, you could access it usi
 
 ## Merge
 
-Configuration files are slightly different from most other files within the [cascading filesystem](files) in that they are **merged** rather than overloaded. This means that all configuration files with the same file path are combined to produce the final configuration. The end result is that you can overload *individual* settings rather than duplicating an entire file.
+Configuration files are slightly different from most other files within the [cascading filesystem](/documentation/system/files) in that they are **merged** rather than overloaded. This means that all configuration files with the same file path are combined to produce the final configuration. The end result is that you can overload *individual* settings rather than duplicating an entire file.
 
 For example, if we wanted to change or add to an entry in the inflector configuration file, we would not need to duplicate all the other entries from the default configuration file.
 

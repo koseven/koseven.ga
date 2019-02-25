@@ -10,9 +10,9 @@ Kohana is an open source, [object oriented](http://en.wikipedia.org/wiki/Object-
 
 ## What makes Kohana great?
 
-Anything can be extended using the unique [filesystem](files) design, little or no [configuration](config) is necessary, [error handling](errors) helps locate the source of errors quickly, and [debugging](debugging) and [profiling](profiling) provide insight into the application.
+Anything can be extended using the unique [filesystem](/documentation/system/files) design, little or no [configuration](/documentation/system/config) is necessary, [error handling](/documentation/system/errors) helps locate the source of errors quickly, and [debugging](/documentation/system/debugging) and [profiling](/documentation/system/profiling) provide insight into the application.
 
-To help secure your applications, tools for [input validation](security/validation), [signed cookies](security/cookies), [form] and [HTML] generators are all included. The [database](security/database) layer provides protection against [SQL injection](http://wikipedia.org/wiki/SQL_injection). Of course, all official code is carefully written and reviewed for security.
+To help secure your applications, tools for [input validation](/documentation/system/security/validation), [signed cookies](/documentation/system/security/cookies), [form] and [HTML] generators are all included. The [database](/documentation/system/security/database) layer provides protection against [SQL injection](http://wikipedia.org/wiki/SQL_injection). Of course, all official code is carefully written and reviewed for security.
 
 ## Contribute to the Documentation
 
@@ -20,4 +20,4 @@ We are working very hard to provide complete documentation. To help improve the 
 
 ## Unofficial Documentation
 
-If you are having trouble finding an answer here, your answer may be found by searching the [forum](http://forum.kohanaframework.org/) or [Stack Overflow](http://stackoverflow.com/questions/tagged/kohana) followed by asking your question on either.  Additionally, you can chat with the community of developers on the freenode [#kohana](irc://irc.freenode.net/kohana) IRC channel or by joining our [Telegram group](https://telegram.me/koseven).
+If you are having trouble finding an answer here, your answer may be found by searching the [forum](http://forum.kohanaframework.org/) or [Stack Overflow](http://stackoverflow.com/questions/tagged/kohana) followed by asking your question on either.  Additionally, you can chat with the community of developers on the freenode [#kohana](/documentation/system/irc://irc.freenode.net/kohana) IRC channel or by joining our [Telegram group](https://telegram.me/koseven).

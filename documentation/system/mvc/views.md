@@ -10,7 +10,7 @@ Views themselves can contain code used for displaying the data you pass into the
 
 # Creating View Files
 
-View files are stored in the `views` directory of the [filesystem](files). You can also create sub-directories within the `views` directory to organize your files. All of the following examples are reasonable view files:
+View files are stored in the `views` directory of the [filesystem](/documentation/system/files). You can also create sub-directories within the `views` directory to organize your files. All of the following examples are reasonable view files:
 
     APPPATH/views/home.php
     APPPATH/views/pages/about.php
@@ -20,7 +20,7 @@ View files are stored in the `views` directory of the [filesystem](files). You c
 
 ## Loading Views
 
-[View] objects will typically be created inside a [Controller](mvc/controllers) using the [View::factory] method. Typically the view is then assigned as the [Request::$response] property or to another view.
+[View] objects will typically be created inside a [Controller](/documentation/system/mvc/controllers) using the [View::factory] method. Typically the view is then assigned as the [Request::$response] property or to another view.
 
     public function action_about()
     {
