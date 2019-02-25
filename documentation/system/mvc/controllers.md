@@ -63,14 +63,14 @@ Here is a partial list of the properties and methods available to `$this->reques
 
 Property/method | What it does
 --- | ---
-[$this->request->route()](/documentation/system/../api/Request#property:route) | The [Route] that matched the current request url
-[$this->request->directory()](/documentation/system/../api/Request#property:directory), <br /> [$this->request->controller](/documentation/system/../api/Request#property:controller), <br /> [$this->request->action](/documentation/system/../api/Request#property:action) | The directory, controller and action that matched for the current route
-[$this->request->param()](/documentation/system/../api/Request#param) | Any other params defined in your route
+[$this->request->route()](https://docs.koseven.ga/guide-api/Request#property:route) | The [Route] that matched the current request url
+[$this->request->directory()](https://docs.koseven.ga/guide-api/Request#property:directory), <br /> [$this->request->controller](https://docs.koseven.ga/guide-api/Request#property:controller), <br /> [$this->request->action](https://docs.koseven.ga/guide-api/Request#property:action) | The directory, controller and action that matched for the current route
+[$this->request->param()](https://docs.koseven.ga/guide-api/Request#param) | Any other params defined in your route
 
 ## $this->response
-[$this->response->body()](/documentation/system/../api/Response#property:body) | The content to return for this request
-[$this->response->status()](/documentation/system/../api/Response#property:status) | The HTTP status for the request (200, 404, 500, etc.)
-[$this->response->headers()](/documentation/system/../api/Response#property:headers) | The HTTP headers to return with the response
+[$this->response->body()](https://docs.koseven.ga/guide-api/Response#property:body) | The content to return for this request
+[$this->response->status()](https://docs.koseven.ga/guide-api/Response#property:status) | The HTTP status for the request (200, 404, 500, etc.)
+[$this->response->headers()](https://docs.koseven.ga/guide-api/Response#property:headers) | The HTTP headers to return with the response
 
 
 ## Actions

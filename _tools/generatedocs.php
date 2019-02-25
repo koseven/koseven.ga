@@ -167,14 +167,22 @@ function fixLinks(string $path, string $processedDir, string $folder, bool $menu
 			$result = preg_replace_callback('#[^()]*\((([^()]+|(?R))*)\)[^()]*#', function ($matches) use (&$initial)
 			{
 				// Don't update external links
-				if (strpos($matches[1], 'http') === FALSE) {
+				if (strpos($matches[1], 'http') === FALSE)
+				{
 					$initial[] = $matches[1];
 				}
 			}, $line);
 
 			// Loop through matches and replace
-			foreach ($initial as $init) {
+			foreach ($initial as $init)
+			{
 				$repl =  '/'.$processedDir.'/'.$folder.'/'.$init;
+
+				// API not ported yet
+				if (strpos($init, '../api/') !== FALSE)
+				{
+					$repl = 'https://docs.koseven.ga/guide-api/'. str_replace('../api/', '', $init);
+				}
 				$line = str_replace(']('.$init.')', ']('.$repl.')', $line);
 			}
 		}
