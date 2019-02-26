@@ -1172,6 +1172,10 @@ select {
   margin-bottom: 0;
 }
 
+.landing-page .branding .logo img {
+    max-width: 100%;
+}
+
 .landing-page .branding .text-bold {
   font-weight: 800;
   color: #fff;
