@@ -1434,3 +1434,89 @@ section.story h2 {
     padding: 30px 15px;
   }
 }
+
+/* API Browser */
+section.api dl.tags {
+  margin: 0;
+  overflow: auto;
+  background: #e8efcf;
+  padding: 1em;
+  border: solid 1px #d8dfbf;
+}
+
+section.api dl.tags dt {
+  float: left;
+  width: 30%;
+  text-align: left;
+}
+
+section.api dl.tags dd {
+  width: 70%;
+  float: left;
+  text-align: right;
+}
+
+section.api div.properties dl dd {
+  margin-left: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+section.api div.properties dl dt {
+  font-weight: bold;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+section.api span.blue {
+  color: #156d83;
+}
+
+.content-title.api-header {
+  padding-left: 25%;
+}
+
+section.api h1 {
+  font-size: 30px;
+}
+
+section.api div.method {
+  padding: 0 1.5em;
+  border: 1px solid #c8cfaf;
+  border-radius: 5px;
+  margin-bottom: 1.5em;
+}
+
+section.api div.method h3 {
+  margin-top: 0;
+  margin-left: -1em;
+  margin-right: -1em;
+  padding: .75em 0 .75em 1.17em;
+  background: #e8efcf;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+section.api pre[class*="language-"] {
+  background: #f9f9fb;
+}
+
+section.api .description code {
+  background: initial;
+  color: inherit !important;
+  font-weight: normal;
+}
+
+input#kodoc-api-filter-box {
+  border: 1px solid #ccc;
+  margin-left: 2px;
+}
+
+.class-list .methods, .class-list h2 {
+  word-break: break-word;
+}
+
+@media (max-width: 768px) {
+  .content-title.api-header {
+    padding-left: 0;
+  }
+}
