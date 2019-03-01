@@ -18,4 +18,4 @@ Next, you will then need to [configure](/documentation/database/config) the data
 
 Once that is done then you can make [queries](/documentation/database/query) and use the [results](/documentation/database/results).
 
-The database module also provides a [config driver](https://docs.koseven.ga/guide-api/Kohana_Config_Database) (for storing [configuration](../kohana/files/config) in the database) and a [session driver](/documentation/database/Session_Database).
+The database module also provides a [config driver](/documentation/api/Kohana_Config_Database) (for storing [configuration](../kohana/files/config) in the database) and a [session driver](/documentation/database/Session_Database).
