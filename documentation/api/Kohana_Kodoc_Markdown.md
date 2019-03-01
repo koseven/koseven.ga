@@ -966,243 +966,253 @@ Used to prevent creating multiple headings with same id.</p>
  <p>the generated table of contents</p>
 </dd>
 <dd>
- <pre class="debug"><small>array</small><span>(48)</span> <span>(
+ <pre class="debug"><small>array</small><span>(50)</span> <span>(
     0 => <small>array</small><span>(3)</span> <span>(
-        "level" => <small>integer</small> 3
-        "name" => <small>string</small><span>(23)</span> "Supported cache engines"
-        "id" => <small>string</small><span>(23)</span> "supported-cache-engines"
+        "level" => <small>integer</small> 1
+        "name" => <small>string</small><span>(9)</span> "Heading 1"
+        "id" => <small>string</small><span>(9)</span> "heading-1"
     )</span>
     1 => <small>array</small><span>(3)</span> <span>(
-        "level" => <small>integer</small> 3
-        "name" => <small>string</small><span>(23)</span> "Introduction to caching"
-        "id" => <small>string</small><span>(23)</span> "introduction-to-caching"
+        "level" => <small>integer</small> 1
+        "name" => <small>string</small><span>(9)</span> "Heading 1"
+        "id" => <small>string</small><span>(9)</span> "heading-1"
     )</span>
     2 => <small>array</small><span>(3)</span> <span>(
         "level" => <small>integer</small> 3
-        "name" => <small>string</small><span>(22)</span> "Configuration settings"
-        "id" => <small>string</small><span>(22)</span> "configuration-settings"
+        "name" => <small>string</small><span>(23)</span> "Supported cache engines"
+        "id" => <small>string</small><span>(23)</span> "supported-cache-engines"
     )</span>
     3 => <small>array</small><span>(3)</span> <span>(
-        "level" => <small>integer</small> 4
-        "name" => <small>string</small><span>(21)</span> "Configuration example"
-        "id" => <small>string</small><span>(21)</span> "configuration-example"
-    )</span>
-    4 => <small>array</small><span>(3)</span> <span>(
-        "level" => <small>integer</small> 4
-        "name" => <small>string</small><span>(42)</span> "General cache group configuration settings"
-        "id" => <small>string</small><span>(42)</span> "general-cache-group-configuration-settings"
-    )</span>
-    5 => <small>array</small><span>(3)</span> <span>(
-        "level" => <small>integer</small> 3
-        "name" => <small>string</small><span>(19)</span> "System requirements"
-        "id" => <small>string</small><span>(19)</span> "system-requirements"
-    )</span>
-    6 => <small>array</small><span>(3)</span> <span>(
-        "level" => <small>integer</small> 3
-        "name" => <small>string</small><span>(21)</span> "Configuration example"
-        "id" => <small>string</small><span>(21)</span> "configuration-example"
-    )</span>
-    7 => <small>array</small><span>(3)</span> <span>(
-        "level" => <small>integer</small> 4
-        "name" => <small>string</small><span>(42)</span> "General cache group configuration settings"
-        "id" => <small>string</small><span>(42)</span> "general-cache-group-configuration-settings"
-    )</span>
-    8 => <small>array</small><span>(3)</span> <span>(
-        "level" => <small>integer</small> 3
-        "name" => <small>string</small><span>(19)</span> "System requirements"
-        "id" => <small>string</small><span>(19)</span> "system-requirements"
-    )</span>
-    9 => <small>array</small><span>(3)</span> <span>(
-        "level" => <small>integer</small> 3
-        "name" => <small>string</small><span>(21)</span> "Configuration example"
-        "id" => <small>string</small><span>(21)</span> "configuration-example"
-    )</span>
-    10 => <small>array</small><span>(3)</span> <span>(
-        "level" => <small>integer</small> 4
-        "name" => <small>string</small><span>(42)</span> "General cache group configuration settings"
-        "id" => <small>string</small><span>(42)</span> "general-cache-group-configuration-settings"
-    )</span>
-    11 => <small>array</small><span>(3)</span> <span>(
-        "level" => <small>integer</small> 3
-        "name" => <small>string</small><span>(19)</span> "System requirements"
-        "id" => <small>string</small><span>(19)</span> "system-requirements"
-    )</span>
-    12 => <small>array</small><span>(3)</span> <span>(
-        "level" => <small>integer</small> 3
-        "name" => <small>string</small><span>(21)</span> "Configuration example"
-        "id" => <small>string</small><span>(21)</span> "configuration-example"
-    )</span>
-    13 => <small>array</small><span>(3)</span> <span>(
-        "level" => <small>integer</small> 4
-        "name" => <small>string</small><span>(42)</span> "General cache group configuration settings"
-        "id" => <small>string</small><span>(42)</span> "general-cache-group-configuration-settings"
-    )</span>
-    14 => <small>array</small><span>(3)</span> <span>(
-        "level" => <small>integer</small> 3
-        "name" => <small>string</small><span>(19)</span> "System requirements"
-        "id" => <small>string</small><span>(19)</span> "system-requirements"
-    )</span>
-    15 => <small>array</small><span>(3)</span> <span>(
-        "level" => <small>integer</small> 3
-        "name" => <small>string</small><span>(23)</span> "Supported cache engines"
-        "id" => <small>string</small><span>(23)</span> "supported-cache-engines"
-    )</span>
-    16 => <small>array</small><span>(3)</span> <span>(
-        "level" => <small>integer</small> 3
-        "name" => <small>string</small><span>(21)</span> "Configuration example"
-        "id" => <small>string</small><span>(21)</span> "configuration-example"
-    )</span>
-    17 => <small>array</small><span>(3)</span> <span>(
-        "level" => <small>integer</small> 4
-        "name" => <small>string</small><span>(42)</span> "General cache group configuration settings"
-        "id" => <small>string</small><span>(42)</span> "general-cache-group-configuration-settings"
-    )</span>
-    18 => <small>array</small><span>(3)</span> <span>(
-        "level" => <small>integer</small> 4
-        "name" => <small>string</small><span>(29)</span> "Memcache server configuration"
-        "id" => <small>string</small><span>(29)</span> "memcache-server-configuration"
-    )</span>
-    19 => <small>array</small><span>(3)</span> <span>(
-        "level" => <small>integer</small> 3
-        "name" => <small>string</small><span>(19)</span> "System requirements"
-        "id" => <small>string</small><span>(19)</span> "system-requirements"
-    )</span>
-    20 => <small>array</small><span>(3)</span> <span>(
-        "level" => <small>integer</small> 3
-        "name" => <small>string</small><span>(21)</span> "Configuration example"
-        "id" => <small>string</small><span>(21)</span> "configuration-example"
-    )</span>
-    21 => <small>array</small><span>(3)</span> <span>(
-        "level" => <small>integer</small> 4
-        "name" => <small>string</small><span>(42)</span> "General cache group configuration settings"
-        "id" => <small>string</small><span>(42)</span> "general-cache-group-configuration-settings"
-    )</span>
-    22 => <small>array</small><span>(3)</span> <span>(
-        "level" => <small>integer</small> 3
-        "name" => <small>string</small><span>(19)</span> "System requirements"
-        "id" => <small>string</small><span>(19)</span> "system-requirements"
-    )</span>
-    23 => <small>array</small><span>(3)</span> <span>(
-        "level" => <small>integer</small> 1
-        "name" => <small>string</small><span>(9)</span> "Heading 1"
-        "id" => <small>string</small><span>(9)</span> "heading-1"
-    )</span>
-    24 => <small>array</small><span>(3)</span> <span>(
-        "level" => <small>integer</small> 1
-        "name" => <small>string</small><span>(9)</span> "Heading 1"
-        "id" => <small>string</small><span>(9)</span> "heading-1"
-    )</span>
-    25 => <small>array</small><span>(3)</span> <span>(
-        "level" => <small>integer</small> 3
-        "name" => <small>string</small><span>(23)</span> "Supported cache engines"
-        "id" => <small>string</small><span>(23)</span> "supported-cache-engines"
-    )</span>
-    26 => <small>array</small><span>(3)</span> <span>(
         "level" => <small>integer</small> 3
         "name" => <small>string</small><span>(23)</span> "Introduction to caching"
         "id" => <small>string</small><span>(23)</span> "introduction-to-caching"
     )</span>
-    27 => <small>array</small><span>(3)</span> <span>(
+    4 => <small>array</small><span>(3)</span> <span>(
         "level" => <small>integer</small> 3
         "name" => <small>string</small><span>(22)</span> "Configuration settings"
         "id" => <small>string</small><span>(22)</span> "configuration-settings"
     )</span>
-    28 => <small>array</small><span>(3)</span> <span>(
+    5 => <small>array</small><span>(3)</span> <span>(
         "level" => <small>integer</small> 4
         "name" => <small>string</small><span>(21)</span> "Configuration example"
         "id" => <small>string</small><span>(21)</span> "configuration-example"
     )</span>
-    29 => <small>array</small><span>(3)</span> <span>(
+    6 => <small>array</small><span>(3)</span> <span>(
         "level" => <small>integer</small> 4
         "name" => <small>string</small><span>(42)</span> "General cache group configuration settings"
         "id" => <small>string</small><span>(42)</span> "general-cache-group-configuration-settings"
     )</span>
-    30 => <small>array</small><span>(3)</span> <span>(
+    7 => <small>array</small><span>(3)</span> <span>(
         "level" => <small>integer</small> 3
         "name" => <small>string</small><span>(19)</span> "System requirements"
         "id" => <small>string</small><span>(19)</span> "system-requirements"
     )</span>
-    31 => <small>array</small><span>(3)</span> <span>(
+    8 => <small>array</small><span>(3)</span> <span>(
         "level" => <small>integer</small> 3
         "name" => <small>string</small><span>(21)</span> "Configuration example"
         "id" => <small>string</small><span>(21)</span> "configuration-example"
     )</span>
-    32 => <small>array</small><span>(3)</span> <span>(
+    9 => <small>array</small><span>(3)</span> <span>(
         "level" => <small>integer</small> 4
         "name" => <small>string</small><span>(42)</span> "General cache group configuration settings"
         "id" => <small>string</small><span>(42)</span> "general-cache-group-configuration-settings"
     )</span>
-    33 => <small>array</small><span>(3)</span> <span>(
+    10 => <small>array</small><span>(3)</span> <span>(
         "level" => <small>integer</small> 3
         "name" => <small>string</small><span>(19)</span> "System requirements"
         "id" => <small>string</small><span>(19)</span> "system-requirements"
     )</span>
-    34 => <small>array</small><span>(3)</span> <span>(
+    11 => <small>array</small><span>(3)</span> <span>(
         "level" => <small>integer</small> 3
         "name" => <small>string</small><span>(21)</span> "Configuration example"
         "id" => <small>string</small><span>(21)</span> "configuration-example"
     )</span>
-    35 => <small>array</small><span>(3)</span> <span>(
+    12 => <small>array</small><span>(3)</span> <span>(
         "level" => <small>integer</small> 4
         "name" => <small>string</small><span>(42)</span> "General cache group configuration settings"
         "id" => <small>string</small><span>(42)</span> "general-cache-group-configuration-settings"
     )</span>
-    36 => <small>array</small><span>(3)</span> <span>(
+    13 => <small>array</small><span>(3)</span> <span>(
         "level" => <small>integer</small> 3
         "name" => <small>string</small><span>(19)</span> "System requirements"
         "id" => <small>string</small><span>(19)</span> "system-requirements"
     )</span>
-    37 => <small>array</small><span>(3)</span> <span>(
+    14 => <small>array</small><span>(3)</span> <span>(
         "level" => <small>integer</small> 3
         "name" => <small>string</small><span>(21)</span> "Configuration example"
         "id" => <small>string</small><span>(21)</span> "configuration-example"
     )</span>
-    38 => <small>array</small><span>(3)</span> <span>(
+    15 => <small>array</small><span>(3)</span> <span>(
         "level" => <small>integer</small> 4
         "name" => <small>string</small><span>(42)</span> "General cache group configuration settings"
         "id" => <small>string</small><span>(42)</span> "general-cache-group-configuration-settings"
     )</span>
-    39 => <small>array</small><span>(3)</span> <span>(
+    16 => <small>array</small><span>(3)</span> <span>(
         "level" => <small>integer</small> 3
         "name" => <small>string</small><span>(19)</span> "System requirements"
         "id" => <small>string</small><span>(19)</span> "system-requirements"
     )</span>
-    40 => <small>array</small><span>(3)</span> <span>(
+    17 => <small>array</small><span>(3)</span> <span>(
         "level" => <small>integer</small> 3
         "name" => <small>string</small><span>(23)</span> "Supported cache engines"
         "id" => <small>string</small><span>(23)</span> "supported-cache-engines"
     )</span>
-    41 => <small>array</small><span>(3)</span> <span>(
+    18 => <small>array</small><span>(3)</span> <span>(
         "level" => <small>integer</small> 3
         "name" => <small>string</small><span>(21)</span> "Configuration example"
         "id" => <small>string</small><span>(21)</span> "configuration-example"
     )</span>
-    42 => <small>array</small><span>(3)</span> <span>(
+    19 => <small>array</small><span>(3)</span> <span>(
         "level" => <small>integer</small> 4
         "name" => <small>string</small><span>(42)</span> "General cache group configuration settings"
         "id" => <small>string</small><span>(42)</span> "general-cache-group-configuration-settings"
     )</span>
-    43 => <small>array</small><span>(3)</span> <span>(
+    20 => <small>array</small><span>(3)</span> <span>(
         "level" => <small>integer</small> 4
         "name" => <small>string</small><span>(29)</span> "Memcache server configuration"
         "id" => <small>string</small><span>(29)</span> "memcache-server-configuration"
     )</span>
-    44 => <small>array</small><span>(3)</span> <span>(
+    21 => <small>array</small><span>(3)</span> <span>(
         "level" => <small>integer</small> 3
         "name" => <small>string</small><span>(19)</span> "System requirements"
         "id" => <small>string</small><span>(19)</span> "system-requirements"
     )</span>
-    45 => <small>array</small><span>(3)</span> <span>(
+    22 => <small>array</small><span>(3)</span> <span>(
         "level" => <small>integer</small> 3
         "name" => <small>string</small><span>(21)</span> "Configuration example"
         "id" => <small>string</small><span>(21)</span> "configuration-example"
     )</span>
-    46 => <small>array</small><span>(3)</span> <span>(
+    23 => <small>array</small><span>(3)</span> <span>(
         "level" => <small>integer</small> 4
         "name" => <small>string</small><span>(42)</span> "General cache group configuration settings"
         "id" => <small>string</small><span>(42)</span> "general-cache-group-configuration-settings"
     )</span>
+    24 => <small>array</small><span>(3)</span> <span>(
+        "level" => <small>integer</small> 3
+        "name" => <small>string</small><span>(19)</span> "System requirements"
+        "id" => <small>string</small><span>(19)</span> "system-requirements"
+    )</span>
+    25 => <small>array</small><span>(3)</span> <span>(
+        "level" => <small>integer</small> 1
+        "name" => <small>string</small><span>(9)</span> "Heading 1"
+        "id" => <small>string</small><span>(9)</span> "heading-1"
+    )</span>
+    26 => <small>array</small><span>(3)</span> <span>(
+        "level" => <small>integer</small> 1
+        "name" => <small>string</small><span>(9)</span> "Heading 1"
+        "id" => <small>string</small><span>(9)</span> "heading-1"
+    )</span>
+    27 => <small>array</small><span>(3)</span> <span>(
+        "level" => <small>integer</small> 3
+        "name" => <small>string</small><span>(23)</span> "Supported cache engines"
+        "id" => <small>string</small><span>(23)</span> "supported-cache-engines"
+    )</span>
+    28 => <small>array</small><span>(3)</span> <span>(
+        "level" => <small>integer</small> 3
+        "name" => <small>string</small><span>(23)</span> "Introduction to caching"
+        "id" => <small>string</small><span>(23)</span> "introduction-to-caching"
+    )</span>
+    29 => <small>array</small><span>(3)</span> <span>(
+        "level" => <small>integer</small> 3
+        "name" => <small>string</small><span>(22)</span> "Configuration settings"
+        "id" => <small>string</small><span>(22)</span> "configuration-settings"
+    )</span>
+    30 => <small>array</small><span>(3)</span> <span>(
+        "level" => <small>integer</small> 4
+        "name" => <small>string</small><span>(21)</span> "Configuration example"
+        "id" => <small>string</small><span>(21)</span> "configuration-example"
+    )</span>
+    31 => <small>array</small><span>(3)</span> <span>(
+        "level" => <small>integer</small> 4
+        "name" => <small>string</small><span>(42)</span> "General cache group configuration settings"
+        "id" => <small>string</small><span>(42)</span> "general-cache-group-configuration-settings"
+    )</span>
+    32 => <small>array</small><span>(3)</span> <span>(
+        "level" => <small>integer</small> 3
+        "name" => <small>string</small><span>(19)</span> "System requirements"
+        "id" => <small>string</small><span>(19)</span> "system-requirements"
+    )</span>
+    33 => <small>array</small><span>(3)</span> <span>(
+        "level" => <small>integer</small> 3
+        "name" => <small>string</small><span>(21)</span> "Configuration example"
+        "id" => <small>string</small><span>(21)</span> "configuration-example"
+    )</span>
+    34 => <small>array</small><span>(3)</span> <span>(
+        "level" => <small>integer</small> 4
+        "name" => <small>string</small><span>(42)</span> "General cache group configuration settings"
+        "id" => <small>string</small><span>(42)</span> "general-cache-group-configuration-settings"
+    )</span>
+    35 => <small>array</small><span>(3)</span> <span>(
+        "level" => <small>integer</small> 3
+        "name" => <small>string</small><span>(19)</span> "System requirements"
+        "id" => <small>string</small><span>(19)</span> "system-requirements"
+    )</span>
+    36 => <small>array</small><span>(3)</span> <span>(
+        "level" => <small>integer</small> 3
+        "name" => <small>string</small><span>(21)</span> "Configuration example"
+        "id" => <small>string</small><span>(21)</span> "configuration-example"
+    )</span>
+    37 => <small>array</small><span>(3)</span> <span>(
+        "level" => <small>integer</small> 4
+        "name" => <small>string</small><span>(42)</span> "General cache group configuration settings"
+        "id" => <small>string</small><span>(42)</span> "general-cache-group-configuration-settings"
+    )</span>
+    38 => <small>array</small><span>(3)</span> <span>(
+        "level" => <small>integer</small> 3
+        "name" => <small>string</small><span>(19)</span> "System requirements"
+        "id" => <small>string</small><span>(19)</span> "system-requirements"
+    )</span>
+    39 => <small>array</small><span>(3)</span> <span>(
+        "level" => <small>integer</small> 3
+        "name" => <small>string</small><span>(21)</span> "Configuration example"
+        "id" => <small>string</small><span>(21)</span> "configuration-example"
+    )</span>
+    40 => <small>array</small><span>(3)</span> <span>(
+        "level" => <small>integer</small> 4
+        "name" => <small>string</small><span>(42)</span> "General cache group configuration settings"
+        "id" => <small>string</small><span>(42)</span> "general-cache-group-configuration-settings"
+    )</span>
+    41 => <small>array</small><span>(3)</span> <span>(
+        "level" => <small>integer</small> 3
+        "name" => <small>string</small><span>(19)</span> "System requirements"
+        "id" => <small>string</small><span>(19)</span> "system-requirements"
+    )</span>
+    42 => <small>array</small><span>(3)</span> <span>(
+        "level" => <small>integer</small> 3
+        "name" => <small>string</small><span>(23)</span> "Supported cache engines"
+        "id" => <small>string</small><span>(23)</span> "supported-cache-engines"
+    )</span>
+    43 => <small>array</small><span>(3)</span> <span>(
+        "level" => <small>integer</small> 3
+        "name" => <small>string</small><span>(21)</span> "Configuration example"
+        "id" => <small>string</small><span>(21)</span> "configuration-example"
+    )</span>
+    44 => <small>array</small><span>(3)</span> <span>(
+        "level" => <small>integer</small> 4
+        "name" => <small>string</small><span>(42)</span> "General cache group configuration settings"
+        "id" => <small>string</small><span>(42)</span> "general-cache-group-configuration-settings"
+    )</span>
+    45 => <small>array</small><span>(3)</span> <span>(
+        "level" => <small>integer</small> 4
+        "name" => <small>string</small><span>(29)</span> "Memcache server configuration"
+        "id" => <small>string</small><span>(29)</span> "memcache-server-configuration"
+    )</span>
+    46 => <small>array</small><span>(3)</span> <span>(
+        "level" => <small>integer</small> 3
+        "name" => <small>string</small><span>(19)</span> "System requirements"
+        "id" => <small>string</small><span>(19)</span> "system-requirements"
+    )</span>
     47 => <small>array</small><span>(3)</span> <span>(
+        "level" => <small>integer</small> 3
+        "name" => <small>string</small><span>(21)</span> "Configuration example"
+        "id" => <small>string</small><span>(21)</span> "configuration-example"
+    )</span>
+    48 => <small>array</small><span>(3)</span> <span>(
+        "level" => <small>integer</small> 4
+        "name" => <small>string</small><span>(42)</span> "General cache group configuration settings"
+        "id" => <small>string</small><span>(42)</span> "general-cache-group-configuration-settings"
+    )</span>
+    49 => <small>array</small><span>(3)</span> <span>(
         "level" => <small>integer</small> 3
         "name" => <small>string</small><span>(19)</span> "System requirements"
         "id" => <small>string</small><span>(19)</span> "system-requirements"

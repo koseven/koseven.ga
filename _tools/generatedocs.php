@@ -284,6 +284,13 @@ class Documentation_Generator {
 			// Get Folder Name without full path
 			$folder = strtok(str_replace([self::$_modules_path, self::$_cloned_files_path, DIRECTORY_SEPARATOR.'guide'], '', $guide), DIRECTORY_SEPARATOR);
 
+			// Rename System folder to kohana, so we can redirect from the old page
+			if($folder === 'system')
+			{
+				$folder = 'kohana';
+			}
+
+
 			// Create according dir
 			if ( ! is_dir($targetDir = $this->_documentation_dir.DIRECTORY_SEPARATOR.$folder) && ! mkdir($targetDir, 0777, TRUE) && ! is_dir($targetDir))
 			{
@@ -378,6 +385,11 @@ class Documentation_Generator {
 		// Get folder without absolute path
 		$folder = strtok(str_replace([self::$_modules_path, self::$_cloned_files_path, DIRECTORY_SEPARATOR.'guide'], '', $module), DIRECTORY_SEPARATOR);
 
+		// Rename System folder to kohana, so we can redirect from the old page
+		if ($folder ==='system')
+		{
+			$folder = 'kohana';
+		}
 
 		// Loop through each line of the file
 		$data = array_map(function($line) use ($documentation_dir, $api_dir, $asset_dir, $folder, $menu, $module)
@@ -604,8 +616,6 @@ class Documentation_Generator {
 		$html .= '</div>';
 
 		file_put_contents($this->_api_dir.DIRECTORY_SEPARATOR.'index.md', $html);
-
-		die();
 	}
 
 	/**
