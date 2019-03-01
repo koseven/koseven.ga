@@ -19,6 +19,11 @@
                     <a href="/{{ include.pre }}">{{ include.pre | capitalize_all }}</a>
                 </li>
             {% endif %}
+            {% if include.api %}
+                <li class="breadcrumb-item">
+                    <a href="/documentation/api">API-Browser</a>
+                </li>
+            {% endif %}
             <li class="breadcrumb-item active">{{ include.current }}</li>
         </ol>
     </div>
