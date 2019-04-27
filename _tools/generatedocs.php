@@ -1,4 +1,11 @@
 <?php
+
+// Let's go!
+$generator = new Documentation_Generator();
+$generator->_parse_doc = (bool) ($_GET['documentation'] ?? TRUE);
+$generator->_parse_api = (bool) ($_GET['api'] ?? TRUE);
+$generator->generate();
+
 /**
  * Koseven Documentation Generator Class
  *
@@ -355,8 +362,8 @@ class Documentation_Generator {
 				}
 			}
 		}
-		echo '<p><span style="color: lightgreen;">Successfully</span> copied Documentation Files! You can browse them under your "'.$this->_documentation_dir.'" directory.</p>'.
-			'<p>Please note all image assets are copied into the "'.$this->_asset_dir.'" directory.</p>';
+		echo '<span style="color: lightgreen;">Successfully</span> copied Documentation Files! You can browse them under your "'.$this->_documentation_dir.'" directory. <br />'.
+			'Please note all image assets are copied into the "'.$this->_asset_dir.'" directory <br />';
 	}
 
 	/**
@@ -486,7 +493,7 @@ class Documentation_Generator {
 			$this->classToHTML($name, $reflection);
 		}
 
-		echo '<p><span style="color: lightgreen;">Successfully</span> copied API Files! You can browse them under your "'.$this->_api_dir.'" directory.</p>';
+		echo '<span style="color: lightgreen;">Successfully</span> copied API Files! You can browse them under your "'.$this->_api_dir.'" directory. <br />';
 	}
 
 	/**
@@ -503,39 +510,26 @@ class Documentation_Generator {
 		// Now lets loop through them
 		$menu_classes = [];
 		$classes = [];
-		foreach (array_merge($system, $modules) as $class_folder)
-		{
-			if (strpos($class_folder, 'unittest') !== FALSE)
-			{
+		foreach (array_merge($system, $modules) as $class_folder) {
+
+			if (strpos($class_folder, 'unittest') !== FALSE) {
 				continue;
 			}
 
-			$iterator = new RecursiveIteratorIterator(
-				new RecursiveDirectoryIterator($class_folder, RecursiveDirectoryIterator::SKIP_DOTS),
-				RecursiveIteratorIterator::SELF_FIRST
-			);
-			foreach ($iterator as $item)
-			{
-				if ( ! $item->isDir())
-				{
+			foreach (
+				$iterator = new \RecursiveIteratorIterator(
+					new \RecursiveDirectoryIterator($class_folder, \RecursiveDirectoryIterator::SKIP_DOTS),
+					\RecursiveIteratorIterator::SELF_FIRST) as $item
+			) {
+				if ( ! $item->isDir()) {
 					// Remove Path and Extension from class and Extract class name only
 					$class = substr(str_replace([$class_folder.DIRECTORY_SEPARATOR, DIRECTORY_SEPARATOR], ['', '_'], $item), 0, -4);
 
 					// Remove Duplicate classes for menu
-					if (strpos($class, 'Kohana_') === 0)
+					if (strpos($class, 'Kohana') === 0)
 					{
 						$short = substr($class, 7);
-						if (class_exists($short) && file_exists(str_replace('Kohana'.DIRECTORY_SEPARATOR, '', $item->getPathname())))
-						{
-							$classes[$class] = Kodoc_Class::factory($class);
-							$class = $short;
-						}
-					}
-					elseif (strpos($class, 'KO7_') === 0)
-					{
-						$short = substr($class, 4);
-						if (class_exists($short) AND file_exists(str_replace('KO7'.DIRECTORY_SEPARATOR, '', $item->getPathname())))
-						{
+						if (class_exists($short) && file_exists(str_replace('Kohana'.DIRECTORY_SEPARATOR, '', $item->getPathname()))) {
 							$classes[$class] = Kodoc_Class::factory($class);
 							$class = $short;
 						}
@@ -591,24 +585,17 @@ class Documentation_Generator {
 		foreach ($this->_api_classes as $name => $reflection)
 		{
 			// Remove Duplicate classes
-			if (strpos($name, 'Kohana_') === 0)
+			if (strpos($name, 'Kohana') === 0)
 			{
 				$short = substr($name, 7);
 				if (class_exists($name) && $reflection->class->getFilename()) {
 					continue;
 				}
 			}
-			elseif (strpos($name, 'KO7_') === 0)
-			{
-				$short = substr($name, 4);
-				if (class_exists($name) && $reflection->class->getFilename()) {
-					continue;
-				}
-			}
 
 			$side =  $counter % 2 === 0 ? 'left' : 'right';
-			$html .= "<div class='col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 class {$side}'>\n";
-			$html .= "<h2>\n<a href='{$link}{$name}'>{$name}</a>\n</h2>\n";
+			$html .= "<div class='col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 class $side'>\n";
+			$html .= "<h2>\n<a href='".$link.$name."'>$name</a>\n</h2>\n";
 			$methods = $reflection->methods();
 			if ($methods)
 			{
@@ -616,11 +603,11 @@ class Documentation_Generator {
 				foreach ($methods as $method)
 				{
 					$declaring = $method->method->getDeclaringClass()->name;
-					if ($declaring !== $name AND $declaring !== 'Kohana_'.$name AND $declaring !== 'KO7_'.$name)
+					if ($declaring !== $name && $declaring !== 'Kohana_'.$name)
 					{
 						continue;
 					}
-					$html .= "<li>\n<a href='{$link}{$name}#{$method->method->name}'>{$name}::{$method->method->name}</a>\n</li>\n";
+					$html .= '<li>'.PHP_EOL.'<a href="'.$link.$name.'#'.$method->method->name.'">'.$name.'::'.$method->method->name.'</a>'.PHP_EOL.'</li>'.PHP_EOL;
 				}
 				$html .= "</ul>\n";
 			}
@@ -690,10 +677,10 @@ class Documentation_Generator {
 		// Base Link
 		$link = '/'.str_replace(DIRECTORY_SEPARATOR, '/', $this->_api_dir).'/';
 
-		$content = "---\nlayout: api\nclass: {$name}\n---\n";
+		$content = "---\nlayout: api\nclass: $name\n---\n";
 
 		// Start generating file
-		$content .= "<h1>{$name}</h1>\n";
+		$content .= "<h1>$name</h1>\n";
 
 		// Check if PHP internal class
 		if ( ! $reflection->class->getFilename())
@@ -701,7 +688,7 @@ class Documentation_Generator {
 			$anchor = 'http://php.net/manual/class.'.strtolower($reflection->class->name).'.php';
 			$content .= "<div class='callout-block callout-info'>\n<div class='icon-holder'>\n".
 				"<i class='fas fa-info-circle'></i>\n</div>\n<div class='content'>\n".
-				"<h4 class='callout-title'>PHP Internal Class</h4>\n<p>This class is not declared in a file, it is probably an internal <a target='_blank' href='{$anchor}'>PHP class</a></p>\n</div>\n</div>\n";
+				"<h4 class='callout-title'>PHP Internal Class</h4>\n<p>This class is not declared in a file, it is probably an internal <a target='_blank' href='$anchor'>PHP class</a></p>\n</div>\n</div>\n";
 
 			// Write to File and skip to next element
 			file_put_contents($this->_api_dir.DIRECTORY_SEPARATOR.$name.'.md', $content);
@@ -716,7 +703,7 @@ class Documentation_Generator {
 				$this->classToHTML($parent->name, Kodoc_Class::factory($parent->name));
 			}
 			$anchor = $link.$parent->name;
-			$content .= "extends <a href='{$anchor}'>{$parent->name}</a>\n<br>\n";
+			$content .= "extends <a href='$anchor'>$parent->name</a>\n<br />\n";
 		}
 
 		// Check for interfaces
@@ -731,12 +718,12 @@ class Documentation_Generator {
 					$this->classToHTML($interfaces[$i], Kodoc_Class::factory($interfaces[$i]));
 				}
 				$anchor = $link.$interfaces[$i];
-				$content .= $split."<a href='{$anchor}'>{$interfaces[$i]}</a>";
+				$content .= $split."<a href='$anchor'>$interfaces[$i]</a>";
 			}
 			$content .= "</small>\n</p>\n";
 		}
 
-		$content .= "<p>\n<i>".HTML::chars($reflection->description())."</i>\n</p>\n";
+		$content .= "<p>\n<i>".$reflection->description()."</i>\n</p>\n";
 
 		// Get Documentation Tags
 		if ($reflection->tags)
@@ -744,23 +731,23 @@ class Documentation_Generator {
 			$content .= "<dl class='tags'>\n";
 			foreach ($reflection->tags as $nm => $set)
 			{
-				$content .= "<dt>{$nm}</dt>\n";
+				$content .= "<dt>$nm</dt>\n";
 				foreach ($set as $tag)
 				{
-					$content .= "<dd>{$tag}</dd>\n";
+					$content .= "<dd>$tag</dd>\n";
 				}
 			}
-			$content .= "</dl>\n<br>\n";
+			$content .= "</dl>\n<br />\n";
 		}
 
-		// If class has a `Kohana`, `KO7` base class it is just a transparent class
-		if (class_exists('Kohana_'.$name) OR class_exists('KO7_'.$name))
+		// If class has a Kohana_ base class it is just a transparent class
+		if (class_exists($parent = 'Kohana_'.$name))
 		{
-			$parent = (class_exists('KO7_'.$name) ? 'KO7_' : 'Kohana_').$name;
 			$anchor = $link.$parent;
+
 			$content .= "<div class='callout-block callout-info'>\n<div class='icon-holder'>\n".
 				"<i class='fas fa-info-circle'></i>\n</div>\n<div class='content'>\n".
-				"<h4 class='callout-title'>Information</h4>\n<p>This class is a transparent base class for <a href='{$anchor}'>{$parent}</a></p>\n</div>\n</div>\n";
+				"<h4 class='callout-title'>Information</h4>\n<p>This class is a transparent base class for <a href='$anchor'>$parent</a></p>\n</div>\n</div>\n";
 		}
 
 		// Table of contents
@@ -771,7 +758,7 @@ class Documentation_Generator {
 		{
 			foreach ($reflection->constants() as $nm => $value)
 			{
-				$content .= "<li>\n<a href='#constant-{$nm}'>{$nm}</a>\n</li>\n";
+				$content .= "<li>\n<a href='#constant-$nm'>$nm</a>\n</li>\n";
 			}
 		}
 		else
@@ -786,7 +773,7 @@ class Documentation_Generator {
 		{
 			foreach ($properties as $prop)
 			{
-				$content .= "<li>\n<a href='#property-{$prop->property->name}'>\${$prop->property->name}</a>\n</li>\n";
+				$content .= '<li>'.PHP_EOL.'<a href="#property-'.$prop->property->name.'">$'.$prop->property->name.'</a>'.PHP_EOL.'</li>'.PHP_EOL;
 			}
 		}
 		else
@@ -801,7 +788,7 @@ class Documentation_Generator {
 		{
 			foreach ($methods as $method)
 			{
-				$content .= "<li>\n<a href='#{$method->method->name}'>{$method->method->name}()</a>\n</li>\n";
+				$content .= '<li>'.PHP_EOL.'<a href="#'.$method->method->name.'">'.$method->method->name.'()</a>'.PHP_EOL.'</li>'.PHP_EOL;
 			}
 		}
 		else
@@ -816,7 +803,7 @@ class Documentation_Generator {
 			$content .= "<div class='constant'>\n<h1 id='constants'>Constants</h1>\n<dl>\n";
 			foreach ($reflection->constants() as $nm => $value)
 			{
-				$content .= "<dt>\n<h4 id='constant-{$nm}'>{$nm}</h4>\n</dt>\n<dd>{$value}</dd>\n";
+				$content .= "<dt>\n<h4 id='constant-$nm'>$nm</h4>\n</dt>\n<dd>$value</dd>\n";
 			}
 			$content .= "</dl>\n</div>\n";
 		}
@@ -827,10 +814,11 @@ class Documentation_Generator {
 			$content .= "<h1 id='properties'>Properties</h1>\n<div class='properties'>\n<dl>\n";
 			foreach ($properties as $prop)
 			{
-				$content .= "<dt>\n<h4 id='property-{$prop->property->name}'>{$prop->modifiers} <span class='blue'>{$prop->type}</span> \${$prop->property->name}</h4>\n</dt>\n<dd>\n ".HTML::chars(ucfirst($prop->description))."</dd>\n<dd>\n {$prop->value}</dd>\n";
+				$content .= "<dt>\n<h4 id='property-".$prop->property->name."'>$prop->modifiers <span class='blue'>$prop->type</span>".' $'.
+					$prop->property->name."</h4>\n</dt>\n<dd>\n $prop->description</dd>\n<dd>\n $prop->value</dd>\n";
 				if ($prop->default !== $prop->value)
 				{
-					$content .= "<dd>\n<small>Default value:</small>\n<br>\n {$prop->default}</dd>\n";
+					$content .= "<dd>\n<small>Default value:</small>\n<br />\n $prop->default</dd>\n";
 				}
 			}
 			$content .= "</dl>\n</div>\n";
@@ -869,14 +857,15 @@ class Documentation_Generator {
 		// Construct HTML string
 		$html = "\n<div class='method'>\n";
 		$declares = $method->method->getDeclaringClass();
-		$params = $method->params ? strtr($method->params_short(), ["'" => '`', '"' => "'"]) : '';
+		$params = $method->params ? $method->params_short() : '';
 		$declLink = $link.$declares->name;
 
 		// Title
-		$html .= "<h3 id='{$method->method->name}'>{$method->modifiers}{$method->method->name}({$params})<small>(defined in <a href='{$declLink}'>{$declares->name}</a>)</small></h3>\n";
+		$html .= '<h3 id="'.$method->method->name.'">'.$method->modifiers.' '.$method->method->name."($params)".
+			"<small> (defined in <a href='$declLink'>$declares->name</a>)</small></h3>\n";
 
 		// Description
-		$html .= "<div class='description'>".HTML::chars(ucfirst($method->description))."</div>\n";
+		$html .= "<div class='description'>$method->description</div>\n";
 
 		// Parameter
 		if ($method->params)
@@ -887,8 +876,8 @@ class Documentation_Generator {
 				$ref = $param->reference ? 'byref ' : '';
 				$type = $param->type ? $param->type : 'unknown';
 				$default = $param->default ? '<small> = '.$param->default.'</small>' : '<small>required</small>';
-				$desc = $param->description ? ' - '.HTML::chars(ucfirst($param->description)) : '';
-				$html .= "<li>\n{$ref} <span class='blue'>{$type}</span> <strong>\${$param->name}</strong> {$default}{$desc}</li>\n";
+				$desc = $param->description ? ' - '.$param->description : '';
+				$html .= '<li>'.PHP_EOL.$ref.' <span class="blue">'.$type.' </span><strong> $'.$param->name.'</strong> '.$default.$desc.'</li>'.PHP_EOL;
 			}
 			$html .= "</ul>\n";
 		}
@@ -900,7 +889,7 @@ class Documentation_Generator {
 			foreach ($method->tags as $name => $set)
 			{
 				$tag = ucfirst($name).($set ? ' - '.implode(', ',$set) : '');
-				$html .= "<li>{$tag}</li>\n";
+				$html .= "<li>$tag</li>\n";
 			}
 			$html .= "</ul>\n";
 		}
@@ -913,7 +902,7 @@ class Documentation_Generator {
 				[$type, $text] = $set;
 				$type = HTML::chars($type);
 				$text = $text ? ' - '.HTML::chars(ucfirst($text)) : '';
-				$html .= "<li>\n<span class='blue'>{$type}</span> {$text}\n</li>";
+				$html .= "<li>\n<span class='blue'>$type</span> $text \n</li>";
 			}
 			$html .= "</ul>\n";
 		}
@@ -921,7 +910,7 @@ class Documentation_Generator {
 		// Source Code
 		if ($method->source)
 		{
-			$html .= "<div class='method-source'>\n<h4>Source Code</h4>\n<pre>\n<code class='language-php'>".HTML::chars($method->source)."</code>\n</pre>\n</div>\n";
+			$html .= '<div class="method-source">'.PHP_EOL.'<h4>Source Code</h4>'.PHP_EOL.'<pre>'.PHP_EOL.'<code class="language-php">'.HTML::chars($method->source).'</code>'.PHP_EOL.'</pre>'.PHP_EOL.'</div>'.PHP_EOL;
 		}
 
 		$html .= "</div>\n";
@@ -948,8 +937,7 @@ class Documentation_Generator {
 		}
 
 		// Check if directory exists
-		if ( ! is_dir($dir))
-		{
+		if ( ! is_dir($dir)) {
 			return;
 		}
 
@@ -960,7 +948,7 @@ class Documentation_Generator {
 			{
 				unlink($f->getRealPath());
 			}
-			elseif ( ! $f->isDot() AND $f->isDir())
+			elseif ( ! $f->isDot() && $f->isDir())
 			{
 				$this->rrmdir($f->getRealPath());
 			}
@@ -991,10 +979,5 @@ class Documentation_Generator {
 	{
 		$this->rrmdir([$this->_documentation_dir, $this->_api_dir, $this->_asset_dir]);
 	}
-}
 
-// Let's go!
-$generator = new Documentation_Generator;
-$generator->_parse_doc = (bool) ($_GET['documentation'] ?? TRUE);
-$generator->_parse_api = (bool) ($_GET['api'] ?? TRUE);
-$generator->generate();
+}
