@@ -71,3 +71,7 @@
   description: Multilingual module for Koseven based on shockiii's Kohana Multilang
   category: misc
 
+- name: Modseven Framework
+  url: https://github.com/toitzi/modseven
+  description: Koseven Framework with PSR-4 and Namespaces support, also slightly more modern.
+  category: misc
