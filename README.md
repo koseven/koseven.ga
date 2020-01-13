@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://koseven.ga" target="_blank">
+  <a href="https://koseven.dev" target="_blank">
     <img src="https://i.imgur.com/2CeT8JL.png" />
   </a>
   <br />
@@ -23,12 +23,12 @@ Koseven is an elegant, open source, and object oriented HMVC framework built usi
 It aims to be swift, secure, and small and provides a rich set of components for building web applications.
 <br /><br />
 With integrated tools for: <br />
-  - [Authentication](https://koseven.ga/documentation/auth/)
-  - [Caching](https://koseven.ga/documentation/cache/)
-  - [Databases](https://koseven.ga/documentation/database/)
-  - [ORM](https://koseven.ga/documentation/orm/)
-  - [Benchmarking](https://koseven.ga/documentation/codebench/)
-  - [Image Manipulation](https://koseven.ga/documentation/image/)
+  - [Authentication](https://koseven.dev/documentation/auth/)
+  - [Caching](https://koseven.dev/documentation/cache/)
+  - [Databases](https://koseven.dev/documentation/database/)
+  - [ORM](https://koseven.dev/documentation/orm/)
+  - [Benchmarking](https://koseven.dev/documentation/codebench/)
+  - [Image Manipulation](https://koseven.dev/documentation/image/)
   
 and many more...developing your own Application gets a lot easier.
 
@@ -43,12 +43,12 @@ If you want to you can also Join our **[Telegram](https://telegram.me/koseven)**
 
 ## Documentation
 
-Koseven documentation can be found [here](https://koseven.ga/documentation). 
+Koseven documentation can be found [here](https://koseven.dev/documentation). 
 <br /> <br />
-Please note our API-Browser is not yet ported to the new Website and can be found [here](https://docs.koseven.ga/guide-api).
+Please note our API-Browser is not yet ported to the new Website and can be found [here](https://docs.koseven.dev/guide-api).
 
 ## Reporting Bugs
-If you've stumbled across a bug, please help us out by [reporting](https://github.com/koseven/koseven.ga/issues/new) 
+If you've stumbled across a bug, please help us out by [reporting](https://github.com/koseven/koseven.dev/issues/new) 
 what you have found.
 
 ## Contributing
