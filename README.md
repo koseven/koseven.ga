@@ -14,7 +14,7 @@
 
 ## Website
 
-This Website uses Jekyll, as it is nativley supported by GitHub Pages. Every time somone pushes into this repository the page will be re-generated.
+This Website uses Jekyll, as it is natively supported by GitHub Pages. Every time someone pushes into this repository the page will be re-generated.
 
 ## About Koseven
 
@@ -39,7 +39,7 @@ Released under a [BSD license](LICENSE), Koseven can be used legally for any ope
 Please consider to **[use our Forum](https://koseven.discourse.group/).**, maybe your answer is already there. 
 If not feel free to open a topic and ask for it.
 <br /><br />
-If you want to you can also Join our **[Telegram](https://telegram.me/koseven)** Group, but keep in mind that this wan't guarantee you faster answer times, as we get also notified via Telegram if you open a Forum Topic.
+If you want to you can also Join our **[Telegram](https://telegram.me/koseven)** Group, but keep in mind that this won't guarantee you faster answer times, as we get also notified via Telegram if you open a Forum Topic.
 
 ## Documentation
 
