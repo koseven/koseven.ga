@@ -65,7 +65,7 @@
   url: https://github.com/toitzi/koseven-debug-toolbar
   description: This a Debbuing Toolbar for Koseven PHP7+ Framework, based on biakaveron's Kohana Toolbar
   category: misc
-  
+
 - name: Koseven Multilang (experimental)
   url: https://github.com/gagarine/koseven-multilang
   description: Multilingual module for Koseven based on shockiii's Kohana Multilang
@@ -73,6 +73,26 @@
 
 - name: Modseven Framework
   url: https://github.com/toitzi/modseven
+  description: Koseven Framework with PSR-4 and Namespaces support, also slightly more modern.
+  category: misc
+
+- name: AWSMail
+  url: https://github.com/softmediadev/koseven-awsmail
+  description: Sending emails trough Amazon Simple Email Service (AWS-SES)
+  category: misc
+
+- name: IP-Api
+  url: https://github.com/softmediadev/koseven-ip-api
+  description: Koseven module that provides free usage of its Geo IP API through multiple response formats using IP Gelocation API
+  category: misc
+  
+- name: Koseven Multilang (experimental)
+  url: https://github.com/gagarine/koseven-multilang
+  description: Multilingual module for Koseven based on shockiii's Kohana Multilang
+  category: misc
+
+- name: Modseven Framework
+  url: https://github.com/modseven/core
   description: Koseven Framework with PSR-4 and Namespaces support, also slightly more modern.
   category: misc
 
