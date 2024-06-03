@@ -17,7 +17,7 @@ Koseven provides both an exception handler and an error handler that transforms 
 
 Click any of the links to toggle the display of additional information:
 
-<div>{{userguide/examples/error}}</div>
+<div>{% raw %}{{userguide/examples/error}}{% endraw %}</div>
 
 ## Disabling Error/Exception Handling
 
