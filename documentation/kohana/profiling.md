@@ -55,4 +55,4 @@ You can display or collect the current [profiler] statistics at any time:
 
 (This is the actual profiler stats for this page.)
 
-{{profiler/stats}}
+{% raw %}{{profiler/stats}}{% endraw %}

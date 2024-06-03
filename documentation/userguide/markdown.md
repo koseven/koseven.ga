@@ -238,4 +238,4 @@ Headers are automatically assigned an id, based on the content of the header, so
 
 If you need you may include a regular Kohana View file by placing the name of the view in double curly brackets.  **If the view is not found, no error or exception will be shown, the curly brackets and view name will simply remain there!**
 
-	{{some/view/file}}
+	{% raw %}{{some/view/file}}{% endraw %}
